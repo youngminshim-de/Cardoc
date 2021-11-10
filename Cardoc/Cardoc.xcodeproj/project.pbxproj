@@ -20,6 +20,7 @@
 		D49C5080273B6D47007EBB9E /* CardocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C507F273B6D47007EBB9E /* CardocUITests.swift */; };
 		D49C5082273B6D47007EBB9E /* CardocUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */; };
 		D49C509C273B8AAF007EBB9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509B273B8AAF007EBB9E /* User.swift */; };
+		D49C509E273B903D007EBB9E /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509D273B903D007EBB9E /* Requestable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D49C507F273B6D47007EBB9E /* CardocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardocUITests.swift; sourceTree = "<group>"; };
 		D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardocUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D49C509B273B8AAF007EBB9E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D49C509D273B903D007EBB9E /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +115,6 @@
 				CB7F8BC84B82FA52E1C9EC69 /* Pods-CardocTests.debug.xcconfig */,
 				D44C1D04BEA03F1934A9319B /* Pods-CardocTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -271,6 +272,7 @@
 		D49C509A273B7308007EBB9E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D49C509D273B903D007EBB9E /* Requestable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -514,6 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49C509E273B903D007EBB9E /* Requestable.swift in Sources */,
 				D49C509C273B8AAF007EBB9E /* User.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */,
