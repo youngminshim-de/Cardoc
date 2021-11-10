@@ -21,6 +21,9 @@
 		D49C5082273B6D47007EBB9E /* CardocUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */; };
 		D49C509C273B8AAF007EBB9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509B273B8AAF007EBB9E /* User.swift */; };
 		D49C509E273B903D007EBB9E /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509D273B903D007EBB9E /* Requestable.swift */; };
+		D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */; };
+		D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A1273B924C007EBB9E /* SessionProtocol.swift */; };
+		D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A3273B935C007EBB9E /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardocUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D49C509B273B8AAF007EBB9E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D49C509D273B903D007EBB9E /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		D49C50A1273B924C007EBB9E /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
+		D49C50A3273B935C007EBB9E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				D49C509D273B903D007EBB9E /* Requestable.swift */,
+				D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */,
+				D49C50A1273B924C007EBB9E /* SessionProtocol.swift */,
+				D49C50A3273B935C007EBB9E /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -517,8 +526,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49C509E273B903D007EBB9E /* Requestable.swift in Sources */,
+				D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */,
 				D49C509C273B8AAF007EBB9E /* User.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
+				D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */,
+				D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */,
 				D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */,
 				D49C5061273B6D45007EBB9E /* SceneDelegate.swift in Sources */,
 			);
