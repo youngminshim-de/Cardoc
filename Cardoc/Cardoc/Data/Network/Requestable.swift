@@ -36,12 +36,14 @@ class SearchingRequest: Requestable {
 }
 
 enum EndPoint: CustomStringConvertible {
-    case mainURL
+    case mainURL, searchingUserURL
     
     var description: String {
         switch self {
         case .mainURL:
             return "https://api.github.com/"
+        case .searchingUserURL:
+            return "https://api.github.com/search/users"
         }
     }
 }

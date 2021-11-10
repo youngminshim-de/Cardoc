@@ -6,16 +6,23 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import NSObject_Rx
+import Alamofire
 
-class SearchingUserViewController: UIViewController, UISearchBarDelegate {
+class SearchingUserViewController: UIViewController {
 
     private var searchController: UISearchController?
     @IBOutlet weak var userInformationTableView: UITableView!
+    var viewModel: UserListViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSearchController()
         setupNavigationItem()
+        let networkTask: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
+        viewModel = UserListViewModel(with: FetchUserListUseCase(with: UserListRepository(with: networkTask)))
     }
     
     private func setupNavigationItem() {
@@ -30,14 +37,29 @@ class SearchingUserViewController: UIViewController, UISearchBarDelegate {
         self.searchController?.searchBar.delegate = self
         self.searchController?.hidesNavigationBarDuringPresentation = true
     }
+    
+    func bindViewModel(with query: [String:Any]?) {
+        
+        viewModel?.excute(with: query)
+            .subscribe(onError: { error in
+                print(error)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        viewModel?.excute(with: query).map{$0.items}
+        .debug()
+        .bind(to: userInformationTableView.rx.items(cellIdentifier: UserListCell.identifier, cellType: UserListCell.self)) { row, item, cell in
+            cell.configure(with: item)
+        }
+        .disposed(by: rx.disposeBag)
+    }
 }
 
-extension SearchingUserViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+
+
+extension SearchingUserViewController: UISearchBarDelegate {    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let query = ["q" : searchBar.text!]
+        bindViewModel(with: query)
     }
 }

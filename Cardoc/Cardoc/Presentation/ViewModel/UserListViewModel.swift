@@ -17,7 +17,7 @@ class UserListViewModel {
         self.fetchUserListUseCase = fetchUserListUseCase
     }
     
-    func excute(with query: [String: Any]? = nil) {
-        userList = fetchUserListUseCase.execute(with: query)
+    func excute(with query: [String: Any]? = nil) -> Observable<UserList>{
+        return fetchUserListUseCase.execute(with: query)
     }
 }
