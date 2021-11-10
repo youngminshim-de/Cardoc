@@ -17,8 +17,8 @@ class AppDiContainer: AppFlowCoordinatorDependencies {
     
     private let dependencies: Dependencies
     
-    init(with dependencies: Dependencies) {
-        self.dependencies = dependencies
+    init() {
+        self.dependencies = Dependencies(searchingUserTask: apiNetworkService)
     }
     
     func makeUserListRepository() -> UserListRepositoryProtocol {

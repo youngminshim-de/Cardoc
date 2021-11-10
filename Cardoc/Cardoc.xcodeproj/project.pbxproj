@@ -30,6 +30,8 @@
 		D49C50AF273BA8EC007EBB9E /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50AE273BA8EC007EBB9E /* UserListUseCase.swift */; };
 		D49C50B1273BAAA5007EBB9E /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50B0273BAAA5007EBB9E /* UserListViewModel.swift */; };
 		D49C50B3273BB105007EBB9E /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50B2273BB105007EBB9E /* UserListCell.swift */; };
+		D4B4F1DC273BE70300406A8B /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F1DB273BE70300406A8B /* AppFlowCoordinator.swift */; };
+		D4B4F1DF273BE7AB00406A8B /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B4F1DE273BE7AB00406A8B /* AppDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		D49C50AE273BA8EC007EBB9E /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 		D49C50B0273BAAA5007EBB9E /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		D49C50B2273BB105007EBB9E /* UserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		D4B4F1DB273BE70300406A8B /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
+		D4B4F1DE273BE7AB00406A8B /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 				D49C5098273B72E2007EBB9E /* DIContainer */,
 				D49C505E273B6D45007EBB9E /* AppDelegate.swift */,
 				D49C5060273B6D45007EBB9E /* SceneDelegate.swift */,
+				D4B4F1DB273BE70300406A8B /* AppFlowCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 		D49C5091273B7253007EBB9E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D4B4F1DD273BE7A000406A8B /* DIContainer */,
 				D49C5097273B72CE007EBB9E /* Flow */,
 				D49C5096273B72BF007EBB9E /* SearchScene */,
 				D49C5095273B72B2007EBB9E /* ViewModel */,
@@ -310,6 +316,14 @@
 				D49C50AA273BA41B007EBB9E /* UserListDTO + Mapping.swift */,
 			);
 			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		D4B4F1DD273BE7A000406A8B /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				D4B4F1DE273BE7AB00406A8B /* AppDIContainer.swift */,
+			);
+			path = DIContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -551,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B4F1DC273BE70300406A8B /* AppFlowCoordinator.swift in Sources */,
 				D49C50B3273BB105007EBB9E /* UserListCell.swift in Sources */,
 				D49C509E273B903D007EBB9E /* Requestable.swift in Sources */,
 				D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */,
@@ -561,6 +576,7 @@
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */,
 				D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */,
+				D4B4F1DF273BE7AB00406A8B /* AppDIContainer.swift in Sources */,
 				D49C50B1273BAAA5007EBB9E /* UserListViewModel.swift in Sources */,
 				D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,

@@ -8,19 +8,20 @@
 import Foundation
 import UIKit
 
+protocol AppFlowCoordinatorDependencies {
+    func makeSearchingUserViewController() -> SearchingUserViewController
+}
+
 protocol Coordinator {
     var rootViewController: UINavigationController { get }
-    func start()
 }
 
 class AppFlowCoordinator: Coordinator {
     var rootViewController: UINavigationController
+    private let dependencies: AppFlowCoordinatorDependencies
     
-    init(with rootViewController: UINavigationController) {
+    init(with rootViewController: UINavigationController, with dependencies: AppFlowCoordinatorDependencies) {
         self.rootViewController = rootViewController
-    }
-    
-    func start() {
-        
+        self.dependencies = dependencies
     }
 }

@@ -15,7 +15,8 @@ class SearchingUserViewController: UIViewController {
 
     private var searchController: UISearchController?
     @IBOutlet weak var userInformationTableView: UITableView!
-    var viewModel: UserListViewModel?
+    private var viewModel: UserListViewModel?
+    weak var coordinator: AppFlowCoordinator?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,19 @@ class SearchingUserViewController: UIViewController {
         setupNavigationItem()
         let networkTask: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
         viewModel = UserListViewModel(with: FetchUserListUseCase(with: UserListRepository(with: networkTask)))
+    }
+    
+    static func create(with viewModel: UserListViewModel) -> SearchingUserViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "SearchingUserViewController") as? SearchingUserViewController else {
+            return SearchingUserViewController()
+        }
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
+    func injectionCoordinator(with coordinator: AppFlowCoordinator) {
+        self.coordinator = coordinator
     }
     
     private func setupNavigationItem() {
