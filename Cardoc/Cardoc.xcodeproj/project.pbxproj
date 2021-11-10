@@ -563,6 +563,7 @@
 				D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */,
 				D49C50B1273BAAA5007EBB9E /* UserListViewModel.swift in Sources */,
 				D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */,
+				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */,
 				D49C5061273B6D45007EBB9E /* SceneDelegate.swift in Sources */,
 			);

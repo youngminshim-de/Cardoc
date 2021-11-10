@@ -37,6 +37,7 @@ class SearchingUserViewController: UIViewController {
         self.searchController?.searchBar.delegate = self
         self.searchController?.hidesNavigationBarDuringPresentation = true
     }
+
     
     func bindViewModel(with query: [String:Any]?) {
         
