@@ -1,0 +1,6 @@
+framework module Pods_Cardoc {
+  umbrella header "Pods-Cardoc-umbrella.h"
+
+  export *
+  module * { export * }
+}

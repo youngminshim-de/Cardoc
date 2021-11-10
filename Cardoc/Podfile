@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Cardoc' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Cardoc
+pod 'Alamofire'
+pod 'Kingfisher'
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'RxDataSources'
+pod 'NSObject+Rx'
+
+  target 'CardocTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'CardocUITests' do
+    # Pods for testing
+  end
+
+end
