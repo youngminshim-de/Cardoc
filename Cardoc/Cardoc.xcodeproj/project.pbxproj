@@ -16,6 +16,7 @@
 		D49C5076273B6D47007EBB9E /* CardocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5075273B6D47007EBB9E /* CardocTests.swift */; };
 		D49C5080273B6D47007EBB9E /* CardocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C507F273B6D47007EBB9E /* CardocUITests.swift */; };
 		D49C5082273B6D47007EBB9E /* CardocUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */; };
+		D49C509C273B8AAF007EBB9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509B273B8AAF007EBB9E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D49C507B273B6D47007EBB9E /* CardocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49C507F273B6D47007EBB9E /* CardocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardocUITests.swift; sourceTree = "<group>"; };
 		D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardocUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D49C509B273B8AAF007EBB9E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		D49C5093273B7287007EBB9E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				D49C509B273B8AAF007EBB9E /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49C509C273B8AAF007EBB9E /* User.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */,
 				D49C5061273B6D45007EBB9E /* SceneDelegate.swift in Sources */,
