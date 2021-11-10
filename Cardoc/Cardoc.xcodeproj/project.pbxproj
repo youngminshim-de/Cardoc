@@ -99,13 +99,14 @@
 		D49C505D273B6D45007EBB9E /* Cardoc */ = {
 			isa = PBXGroup;
 			children = (
-				D49C505E273B6D45007EBB9E /* AppDelegate.swift */,
-				D49C5060273B6D45007EBB9E /* SceneDelegate.swift */,
+				D49C5091273B7253007EBB9E /* Presentation */,
+				D49C5090273B7243007EBB9E /* Data */,
+				D49C508F273B7239007EBB9E /* Domain */,
+				D49C508E273B7231007EBB9E /* Application */,
 				D49C5062273B6D45007EBB9E /* ViewController.swift */,
 				D49C5064273B6D45007EBB9E /* Main.storyboard */,
-				D49C5067273B6D47007EBB9E /* Assets.xcassets */,
-				D49C5069273B6D47007EBB9E /* LaunchScreen.storyboard */,
 				D49C506C273B6D47007EBB9E /* Info.plist */,
+				D49C5092273B726F007EBB9E /* SupportingFiles */,
 			);
 			path = Cardoc;
 			sourceTree = "<group>";
@@ -125,6 +126,109 @@
 				D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */,
 			);
 			path = CardocUITests;
+			sourceTree = "<group>";
+		};
+		D49C508E273B7231007EBB9E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D49C5098273B72E2007EBB9E /* DIContainer */,
+				D49C505E273B6D45007EBB9E /* AppDelegate.swift */,
+				D49C5060273B6D45007EBB9E /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D49C508F273B7239007EBB9E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				D49C5094273B7290007EBB9E /* UseCases */,
+				D49C5093273B7287007EBB9E /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D49C5090273B7243007EBB9E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D49C509A273B7308007EBB9E /* Network */,
+				D49C5099273B72FE007EBB9E /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D49C5091273B7253007EBB9E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D49C5097273B72CE007EBB9E /* Flow */,
+				D49C5096273B72BF007EBB9E /* SearchScene */,
+				D49C5095273B72B2007EBB9E /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D49C5092273B726F007EBB9E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				D49C5067273B6D47007EBB9E /* Assets.xcassets */,
+				D49C5069273B6D47007EBB9E /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D49C5093273B7287007EBB9E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		D49C5094273B7290007EBB9E /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		D49C5095273B72B2007EBB9E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D49C5096273B72BF007EBB9E /* SearchScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchScene;
+			sourceTree = "<group>";
+		};
+		D49C5097273B72CE007EBB9E /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		D49C5098273B72E2007EBB9E /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		D49C5099273B72FE007EBB9E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D49C509A273B7308007EBB9E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
