@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Decodable {
+struct UserList: Decodable {
     private (set) var totalCount: Int
     private (set) var items: [Item]
 }

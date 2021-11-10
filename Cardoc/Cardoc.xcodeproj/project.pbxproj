@@ -19,12 +19,13 @@
 		D49C5076273B6D47007EBB9E /* CardocTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5075273B6D47007EBB9E /* CardocTests.swift */; };
 		D49C5080273B6D47007EBB9E /* CardocUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C507F273B6D47007EBB9E /* CardocUITests.swift */; };
 		D49C5082273B6D47007EBB9E /* CardocUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */; };
-		D49C509C273B8AAF007EBB9E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509B273B8AAF007EBB9E /* User.swift */; };
+		D49C509C273B8AAF007EBB9E /* UserList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509B273B8AAF007EBB9E /* UserList.swift */; };
 		D49C509E273B903D007EBB9E /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509D273B903D007EBB9E /* Requestable.swift */; };
 		D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */; };
 		D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A1273B924C007EBB9E /* SessionProtocol.swift */; };
 		D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A3273B935C007EBB9E /* NetworkError.swift */; };
 		D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A5273B957B007EBB9E /* NetworkTask.swift */; };
+		D49C50AB273BA41B007EBB9E /* UserListDTO + Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50AA273BA41B007EBB9E /* UserListDTO + Mapping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,12 +68,13 @@
 		D49C507B273B6D47007EBB9E /* CardocUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardocUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49C507F273B6D47007EBB9E /* CardocUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardocUITests.swift; sourceTree = "<group>"; };
 		D49C5081273B6D47007EBB9E /* CardocUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardocUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		D49C509B273B8AAF007EBB9E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D49C509B273B8AAF007EBB9E /* UserList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserList.swift; sourceTree = "<group>"; };
 		D49C509D273B903D007EBB9E /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		D49C50A1273B924C007EBB9E /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
 		D49C50A3273B935C007EBB9E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D49C50A5273B957B007EBB9E /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		D49C50AA273BA41B007EBB9E /* UserListDTO + Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListDTO + Mapping.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 		D49C5090273B7243007EBB9E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D49C50A9273BA3FF007EBB9E /* DataMapping */,
 				D49C509A273B7308007EBB9E /* Network */,
 				D49C5099273B72FE007EBB9E /* Repositories */,
 			);
@@ -229,7 +232,7 @@
 		D49C5093273B7287007EBB9E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				D49C509B273B8AAF007EBB9E /* User.swift */,
+				D49C509B273B8AAF007EBB9E /* UserList.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -287,6 +290,14 @@
 				D49C50A5273B957B007EBB9E /* NetworkTask.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D49C50A9273BA3FF007EBB9E /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				D49C50AA273BA41B007EBB9E /* UserListDTO + Mapping.swift */,
+			);
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -530,7 +541,8 @@
 			files = (
 				D49C509E273B903D007EBB9E /* Requestable.swift in Sources */,
 				D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */,
-				D49C509C273B8AAF007EBB9E /* User.swift in Sources */,
+				D49C509C273B8AAF007EBB9E /* UserList.swift in Sources */,
+				D49C50AB273BA41B007EBB9E /* UserListDTO + Mapping.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */,
 				D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */,
