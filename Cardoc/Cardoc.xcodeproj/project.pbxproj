@@ -24,6 +24,7 @@
 		D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */; };
 		D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A1273B924C007EBB9E /* SessionProtocol.swift */; };
 		D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A3273B935C007EBB9E /* NetworkError.swift */; };
+		D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A5273B957B007EBB9E /* NetworkTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
 		D49C50A1273B924C007EBB9E /* SessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProtocol.swift; sourceTree = "<group>"; };
 		D49C50A3273B935C007EBB9E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		D49C50A5273B957B007EBB9E /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +284,7 @@
 				D49C509F273B91FF007EBB9E /* NetworkDispatcher.swift */,
 				D49C50A1273B924C007EBB9E /* SessionProtocol.swift */,
 				D49C50A3273B935C007EBB9E /* NetworkError.swift */,
+				D49C50A5273B957B007EBB9E /* NetworkTask.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */,
 				D49C509C273B8AAF007EBB9E /* User.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
+				D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */,
 				D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */,
 				D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */,
 				D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */,
