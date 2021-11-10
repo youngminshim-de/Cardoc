@@ -27,6 +27,7 @@
 		D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50A5273B957B007EBB9E /* NetworkTask.swift */; };
 		D49C50AB273BA41B007EBB9E /* UserListDTO + Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50AA273BA41B007EBB9E /* UserListDTO + Mapping.swift */; };
 		D49C50AD273BA5C8007EBB9E /* UserListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50AC273BA5C8007EBB9E /* UserListRepository.swift */; };
+		D49C50AF273BA8EC007EBB9E /* UserListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C50AE273BA8EC007EBB9E /* UserListUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D49C50A5273B957B007EBB9E /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
 		D49C50AA273BA41B007EBB9E /* UserListDTO + Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserListDTO + Mapping.swift"; sourceTree = "<group>"; };
 		D49C50AC273BA5C8007EBB9E /* UserListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRepository.swift; sourceTree = "<group>"; };
+		D49C50AE273BA8EC007EBB9E /* UserListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		D49C5094273B7290007EBB9E /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				D49C50AE273BA8EC007EBB9E /* UserListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */,
 				D49C509C273B8AAF007EBB9E /* UserList.swift in Sources */,
 				D49C50AD273BA5C8007EBB9E /* UserListRepository.swift in Sources */,
+				D49C50AF273BA8EC007EBB9E /* UserListUseCase.swift in Sources */,
 				D49C50AB273BA41B007EBB9E /* UserListDTO + Mapping.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */,
