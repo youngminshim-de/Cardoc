@@ -9,12 +9,13 @@ import UIKit
 
 class UserListCell: UITableViewCell {
 
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     private (set) static var identifier = "UserListCell"
     
     func configure(with item: Item) {
-        var content = self.defaultContentConfiguration()
-        content.text = item.login
-        self.contentConfiguration = content
+        self.avatarImageView.load(url: item.avatarUrl)
+        self.nameLabel.text = item.login
     }
-
 }
