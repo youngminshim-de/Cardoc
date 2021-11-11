@@ -16,5 +16,4 @@ class UserListCell: UITableViewCell {
         content.text = item.login
         self.contentConfiguration = content
     }
-
 }

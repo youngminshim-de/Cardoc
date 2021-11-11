@@ -14,6 +14,7 @@ import Alamofire
 class SearchingUserViewController: UIViewController {
 
     private var searchController: UISearchController?
+    private var searchBar: UISearchBar?
     @IBOutlet weak var userInformationTableView: UITableView!
     private var viewModel: UserListViewModel?
     weak var coordinator: AppFlowCoordinator?
@@ -22,8 +23,7 @@ class SearchingUserViewController: UIViewController {
         super.viewDidLoad()
         setupSearchController()
         setupNavigationItem()
-        let networkTask: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
-        viewModel = UserListViewModel(with: FetchUserListUseCase(with: UserListRepository(with: networkTask)))
+        bindViewModel()
     }
     
     static func create(with viewModel: UserListViewModel) -> SearchingUserViewController {
@@ -50,31 +50,59 @@ class SearchingUserViewController: UIViewController {
         self.searchController = UISearchController()
         self.searchController?.searchBar.delegate = self
         self.searchController?.hidesNavigationBarDuringPresentation = true
+        self.searchBar = self.searchController?.searchBar
     }
 
     
-    func bindViewModel(with query: [String:Any]?) {
+    func bindViewModel() {
         
-        viewModel?.excute(with: query)
+        viewModel?.userList
             .subscribe(onError: { error in
                 print(error)
             })
             .disposed(by: rx.disposeBag)
         
-        viewModel?.excute(with: query).map{$0.items}
-        .debug()
+        viewModel?.userList
         .bind(to: userInformationTableView.rx.items(cellIdentifier: UserListCell.identifier, cellType: UserListCell.self)) { row, item, cell in
             cell.configure(with: item)
+        }
+        .disposed(by: rx.disposeBag)
+                
+        searchBar?.rx.searchButtonClicked
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: { [weak searchBar] in
+                self.viewModel?.fetchMoreDatas.onNext(searchBar?.text ?? "")
+                searchBar?.resignFirstResponder()
+            })
+            .disposed(by: rx.disposeBag)
+                
+        userInformationTableView.rx.didScroll.subscribe { [weak self] _ in
+            guard let self = self else {
+                return
+            }
+            
+            // 현재 스크롤의 위치
+            let offsetY = self.userInformationTableView.contentOffset.y
+            // 테이블뷰의 contentsize의 height
+            let contentHeight = self.userInformationTableView.contentSize.height
+            // 테이블뷰의 height
+            let height = self.userInformationTableView.frame.height
+            // 스크롤이 테이블 뷰의 끝(-100)에 가게 되면 다음페이지를 호출한다.
+            if offsetY > (contentHeight - height - 100) {
+                self.viewModel?.fetchMoreDatas.onNext(self.searchBar?.text ?? "")
+            }
         }
         .disposed(by: rx.disposeBag)
     }
 }
 
-
-
-extension SearchingUserViewController: UISearchBarDelegate {    
+extension SearchingUserViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let query = ["q" : searchBar.text!]
-        bindViewModel(with: query)
+//        let query = ["q" : searchBar.text!]
+//        bindViewModel(with: query)
     }
+}
+
+extension SearchingUserViewController: UITableViewDelegate {
+    
 }
