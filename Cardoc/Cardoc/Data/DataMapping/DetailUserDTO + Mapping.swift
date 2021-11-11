@@ -7,29 +7,29 @@
 
 import Foundation
 
-struct DetailUsersDTO: Decodable {
-    private (set) var user: [DetailUserDTO]
+struct DetailUserDTO: Decodable {
+    private (set) var respositories: [RepositoryDTO]
 }
 
-extension DetailUsersDTO {
-    struct DetailUserDTO: Decodable {
+extension DetailUserDTO {
+    struct RepositoryDTO: Decodable {
         private (set) var owner: Item
         private (set) var description: String
         private (set) var stargazers_count: Int
         private (set) var html_url: String
         
-        func toDomain() -> DetailUser {
+        func toDomain() -> Repository {
             return .init(owner: self.owner, description: self.description, stargazers_count: self.stargazers_count, html_url: self.html_url)
         }
     }
     
-    private func toDomainDetailUsers() -> [DetailUser] {
-        return user.map{ detailUserDTO in
+    private func toDomainDetailUsers() -> [Repository] {
+        return respositories.map{ detailUserDTO in
             detailUserDTO.toDomain()
         }
     }
     
-    func toDomain() -> DetailUsers {
-        return .init(user: toDomainDetailUsers())
+    func toDomain() -> DetailUser {
+        return .init(respositories: toDomainDetailUsers())
     }
 }

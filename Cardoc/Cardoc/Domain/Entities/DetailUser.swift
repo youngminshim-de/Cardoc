@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct DetailUsers: Decodable {
-    private (set) var user: [DetailUser]
+struct DetailUser: Decodable {
+    private (set) var respositories: [Repository]
 }
 
-struct DetailUser: Decodable {
+struct Repository: Decodable {
     private (set) var owner: Item
     private (set) var description: String
     private (set) var stargazers_count: Int
