@@ -11,6 +11,7 @@
 		B30AA03681143E8B4CB505AA /* Pods_CardocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67977216BD8201D5FF8E6DAE /* Pods_CardocTests.framework */; };
 		C511E056CE181672AD4FEE47 /* Pods_Cardoc_CardocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB6F14912603A954CED59D4 /* Pods_Cardoc_CardocUITests.framework */; };
 		D439322F273D059C00185985 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D439322E273D059C00185985 /* UIImageView + Extension.swift */; };
+		D47FDA85273D2C870098BBCF /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */; };
 		D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C505E273B6D45007EBB9E /* AppDelegate.swift */; };
 		D49C5061273B6D45007EBB9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5060273B6D45007EBB9E /* SceneDelegate.swift */; };
 		D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5062273B6D45007EBB9E /* SearchingUserViewController.swift */; };
@@ -63,6 +64,7 @@
 		CB7F8BC84B82FA52E1C9EC69 /* Pods-CardocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardocTests.debug.xcconfig"; path = "Target Support Files/Pods-CardocTests/Pods-CardocTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D439322E273D059C00185985 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		D44C1D04BEA03F1934A9319B /* Pods-CardocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardocTests.release.xcconfig"; path = "Target Support Files/Pods-CardocTests/Pods-CardocTests.release.xcconfig"; sourceTree = "<group>"; };
+		D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
 		D49C505B273B6D45007EBB9E /* Cardoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49C505E273B6D45007EBB9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49C5060273B6D45007EBB9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			children = (
 				D49C5062273B6D45007EBB9E /* SearchingUserViewController.swift */,
 				D49C50B2273BB105007EBB9E /* UserListCell.swift */,
+				D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */,
 			);
 			path = SearchScene;
 			sourceTree = "<group>";
@@ -591,6 +594,7 @@
 				D4B4F1DF273BE7AB00406A8B /* AppDIContainer.swift in Sources */,
 				D49C50B1273BAAA5007EBB9E /* UserListViewModel.swift in Sources */,
 				D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */,
+				D47FDA85273D2C870098BBCF /* DetailUserViewController.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */,
 				D49C5061273B6D45007EBB9E /* SceneDelegate.swift in Sources */,
