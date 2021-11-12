@@ -11,20 +11,48 @@ class DetailUserViewController: UIViewController {
 
     @IBOutlet weak var repoListTableView: UITableView!
     weak var coordinator: AppFlowCoordinator?
+    private var viewModel: DetailUserViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindingViewModel()
     }
     
     override func viewDidLayoutSubviews() {
         repoListTableView.tableHeaderView = makeTableHeaderView()
     }
     
-    func injectionCoordinator(with coordinator: AppFlowCoordinator) {
+    static func create(with viewModel: DetailUserViewModel) -> DetailUserViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DetailUserViewController") as? DetailUserViewController else {
+            return DetailUserViewController()
+        }
+        
+        viewController.viewModel = viewModel
+        return viewController
+    }
+    
+    internal func injectionCoordinator(with coordinator: AppFlowCoordinator) {
         self.coordinator = coordinator
     }
     
-    func makeTableHeaderView() -> UIView {
+    private func bindingViewModel() {
+        
+        viewModel?.detailUser
+            .subscribe(onError: { error in
+                print(error)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        viewModel?.detailUser
+            .bind(to: repoListTableView.rx.items(cellIdentifier: DetailUserCell.identifier, cellType: DetailUserCell.self)) { row, detailUser, cell in
+                cell.configure(with: detailUser)
+            }
+            .disposed(by: rx.disposeBag)
+    }
+    
+    private func makeTableHeaderView() -> UIView {
         let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 64)))
         let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 16, y: 8), size: CGSize(width: 48, height: 48)))
         
@@ -45,18 +73,5 @@ class DetailUserViewController: UIViewController {
         
         headerView.addSubview(label)
         return headerView
-    }
-}
-
-extension DetailUserViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailUserCell.identifier) as? DetailUserCell else {
-            return DetailUserCell()
-        }
-        return cell
     }
 }

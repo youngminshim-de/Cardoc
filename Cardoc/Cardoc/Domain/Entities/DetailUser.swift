@@ -7,13 +7,10 @@
 
 import Foundation
 
-struct DetailUser: Decodable {
-    private (set) var respositories: [Repository]
-}
-
-struct Repository: Decodable {
+struct [DetailUser]: Decodable {
     private (set) var owner: Item
-    private (set) var description: String
-    private (set) var stargazers_count: Int
-    private (set) var html_url: String
+    private (set) var stargazersCount: Int
+    private (set) var description: String?
+    private (set) var language: String?
+    private (set) var htmlUrl: String
 }
