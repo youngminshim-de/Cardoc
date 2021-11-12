@@ -93,13 +93,19 @@ class SearchingUserViewController: UIViewController {
             }
         }
         .disposed(by: rx.disposeBag)
+        
+        Observable.zip(userInformationTableView.rx.modelSelected(UserList.self),
+                       userInformationTableView.rx.itemSelected)
+            .subscribe { (user, indexpath) in
+                user.items[indexpath.row].reposUrl
+            }
+            .disposed(by: rx.disposeBag)
+        
     }
 }
 
 extension SearchingUserViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        let query = ["q" : searchBar.text!]
-//        bindViewModel(with: query)
     }
 }
 

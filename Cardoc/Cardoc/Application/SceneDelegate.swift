@@ -16,13 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windowScene)
-        let searchingUserViewController = appDIContainer.makeSearchingUserViewController()
-        let rootViewController = UINavigationController(rootViewController: searchingUserViewController)
-        flowCoordinator = AppFlowCoordinator(with: rootViewController, with: appDIContainer)
-        searchingUserViewController.injectionCoordinator(with: flowCoordinator!)
-        window?.rootViewController = rootViewController
-        window?.makeKeyAndVisible()
+//        window = UIWindow(windowScene: windowScene)
+//        let searchingUserViewController = appDIContainer.makeSearchingUserViewController()
+//        let rootViewController = UINavigationController(rootViewController: searchingUserViewController)
+//        flowCoordinator = AppFlowCoordinator(with: rootViewController, with: appDIContainer)
+//        searchingUserViewController.injectionCoordinator(with: flowCoordinator!)
+//        window?.rootViewController = rootViewController
+//        window?.makeKeyAndVisible()
     }
 }
 

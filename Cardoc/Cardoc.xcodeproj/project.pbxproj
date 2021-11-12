@@ -10,8 +10,14 @@
 		2CAA20A6A67C8F8C46C0817A /* Pods_Cardoc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B565895886C2C4ACDF08F700 /* Pods_Cardoc.framework */; };
 		B30AA03681143E8B4CB505AA /* Pods_CardocTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67977216BD8201D5FF8E6DAE /* Pods_CardocTests.framework */; };
 		C511E056CE181672AD4FEE47 /* Pods_Cardoc_CardocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB6F14912603A954CED59D4 /* Pods_Cardoc_CardocUITests.framework */; };
+		D400CD77273E0A3F00DAC238 /* DetailUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400CD76273E0A3F00DAC238 /* DetailUserViewModel.swift */; };
 		D439322F273D059C00185985 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D439322E273D059C00185985 /* UIImageView + Extension.swift */; };
 		D47FDA85273D2C870098BBCF /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */; };
+		D47FDA87273D4FAC0098BBCF /* DetailUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA86273D4FAC0098BBCF /* DetailUserCell.swift */; };
+		D47FDA89273D641C0098BBCF /* DetailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA88273D641C0098BBCF /* DetailUser.swift */; };
+		D47FDA8B273D66680098BBCF /* DetailUserDTO + Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA8A273D66680098BBCF /* DetailUserDTO + Mapping.swift */; };
+		D47FDA8D273D67FD0098BBCF /* DetailUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA8C273D67FD0098BBCF /* DetailUserRepository.swift */; };
+		D47FDA8F273D69470098BBCF /* DetailUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA8E273D69470098BBCF /* DetailUserUseCase.swift */; };
 		D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C505E273B6D45007EBB9E /* AppDelegate.swift */; };
 		D49C5061273B6D45007EBB9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5060273B6D45007EBB9E /* SceneDelegate.swift */; };
 		D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49C5062273B6D45007EBB9E /* SearchingUserViewController.swift */; };
@@ -62,9 +68,15 @@
 		B565895886C2C4ACDF08F700 /* Pods_Cardoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB6F14912603A954CED59D4 /* Pods_Cardoc_CardocUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardoc_CardocUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7F8BC84B82FA52E1C9EC69 /* Pods-CardocTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardocTests.debug.xcconfig"; path = "Target Support Files/Pods-CardocTests/Pods-CardocTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D400CD76273E0A3F00DAC238 /* DetailUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewModel.swift; sourceTree = "<group>"; };
 		D439322E273D059C00185985 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		D44C1D04BEA03F1934A9319B /* Pods-CardocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardocTests.release.xcconfig"; path = "Target Support Files/Pods-CardocTests/Pods-CardocTests.release.xcconfig"; sourceTree = "<group>"; };
 		D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
+		D47FDA86273D4FAC0098BBCF /* DetailUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserCell.swift; sourceTree = "<group>"; };
+		D47FDA88273D641C0098BBCF /* DetailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUser.swift; sourceTree = "<group>"; };
+		D47FDA8A273D66680098BBCF /* DetailUserDTO + Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailUserDTO + Mapping.swift"; sourceTree = "<group>"; };
+		D47FDA8C273D67FD0098BBCF /* DetailUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserRepository.swift; sourceTree = "<group>"; };
+		D47FDA8E273D69470098BBCF /* DetailUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserUseCase.swift; sourceTree = "<group>"; };
 		D49C505B273B6D45007EBB9E /* Cardoc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cardoc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D49C505E273B6D45007EBB9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D49C5060273B6D45007EBB9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				D49C509B273B8AAF007EBB9E /* UserList.swift */,
+				D47FDA88273D641C0098BBCF /* DetailUser.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -268,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				D49C50AE273BA8EC007EBB9E /* UserListUseCase.swift */,
+				D47FDA8E273D69470098BBCF /* DetailUserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -276,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				D49C50B0273BAAA5007EBB9E /* UserListViewModel.swift */,
+				D400CD76273E0A3F00DAC238 /* DetailUserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,6 +301,7 @@
 				D49C5062273B6D45007EBB9E /* SearchingUserViewController.swift */,
 				D49C50B2273BB105007EBB9E /* UserListCell.swift */,
 				D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */,
+				D47FDA86273D4FAC0098BBCF /* DetailUserCell.swift */,
 			);
 			path = SearchScene;
 			sourceTree = "<group>";
@@ -308,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				D49C50AC273BA5C8007EBB9E /* UserListRepository.swift */,
+				D47FDA8C273D67FD0098BBCF /* DetailUserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -328,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				D49C50AA273BA41B007EBB9E /* UserListDTO + Mapping.swift */,
+				D47FDA8A273D66680098BBCF /* DetailUserDTO + Mapping.swift */,
 			);
 			path = DataMapping;
 			sourceTree = "<group>";
@@ -580,8 +598,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D439322F273D059C00185985 /* UIImageView + Extension.swift in Sources */,
+				D47FDA87273D4FAC0098BBCF /* DetailUserCell.swift in Sources */,
 				D4B4F1DC273BE70300406A8B /* AppFlowCoordinator.swift in Sources */,
 				D49C50B3273BB105007EBB9E /* UserListCell.swift in Sources */,
+				D400CD77273E0A3F00DAC238 /* DetailUserViewModel.swift in Sources */,
 				D49C509E273B903D007EBB9E /* Requestable.swift in Sources */,
 				D49C50A4273B935C007EBB9E /* NetworkError.swift in Sources */,
 				D49C509C273B8AAF007EBB9E /* UserList.swift in Sources */,
@@ -590,13 +610,17 @@
 				D49C50AB273BA41B007EBB9E /* UserListDTO + Mapping.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */,
+				D47FDA8B273D66680098BBCF /* DetailUserDTO + Mapping.swift in Sources */,
 				D49C50A0273B91FF007EBB9E /* NetworkDispatcher.swift in Sources */,
 				D4B4F1DF273BE7AB00406A8B /* AppDIContainer.swift in Sources */,
 				D49C50B1273BAAA5007EBB9E /* UserListViewModel.swift in Sources */,
 				D49C50A2273B924C007EBB9E /* SessionProtocol.swift in Sources */,
 				D47FDA85273D2C870098BBCF /* DetailUserViewController.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
+				D47FDA8D273D67FD0098BBCF /* DetailUserRepository.swift in Sources */,
 				D49C505F273B6D45007EBB9E /* AppDelegate.swift in Sources */,
+				D47FDA8F273D69470098BBCF /* DetailUserUseCase.swift in Sources */,
+				D47FDA89273D641C0098BBCF /* DetailUser.swift in Sources */,
 				D49C5061273B6D45007EBB9E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

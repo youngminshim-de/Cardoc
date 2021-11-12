@@ -10,7 +10,7 @@ import Alamofire
 import RxSwift
 
 protocol DetailUserRepositoryProtocol {
-    func fetch(with query: [String:Any]?) -> Observable<DetailUser>
+    func fetch(with endPoint: String) -> Observable<DetailUser>
 }
 
 class DetailUserRepository: DetailUserRepositoryProtocol {
@@ -21,9 +21,9 @@ class DetailUserRepository: DetailUserRepositoryProtocol {
         self.networkTask = networkTask
     }
     
-    func fetch(with query: [String:Any]? = nil) -> Observable<DetailUser> {
-        return networkTask.fetch(SearchingRequest(path: EndPoint.searchingUserURL.description,
-                                                  httpMethod: .get, bodyParams: query, headers: nil), DetailUserDTO.self)
+    func fetch(with endPoint: String) -> Observable<DetailUser> {
+        return networkTask.fetch(SearchingRequest(path: endPoint,
+                                                  httpMethod: .get, bodyParams: nil, headers: nil), DetailUserDTO.self)
             .map{$0.toDomain()}
     }
 }
