@@ -16,7 +16,7 @@ class DetailUserCell: UITableViewCell {
     static private (set) var identifier = "DetailUserCell"
     
     func configure(with detailUser: DetailUser ) {
-        self.repositoryNameLabel.text = detailUser.owner.login
+        self.repositoryNameLabel.text = detailUser.name
         self.descriptionLabel.text = detailUser.description
         self.languageLabel.text = detailUser.language
         self.starCountLabel.text = String(detailUser.stargazersCount)

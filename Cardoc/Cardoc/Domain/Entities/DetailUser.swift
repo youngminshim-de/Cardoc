@@ -9,6 +9,7 @@ import Foundation
 
 struct DetailUser: Decodable {
     private (set) var owner: Item
+    private (set) var name: String
     private (set) var stargazersCount: Int
     private (set) var description: String?
     private (set) var language: String?
