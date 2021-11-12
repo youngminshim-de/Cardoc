@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailUserViewController: UIViewController {
 
@@ -16,10 +17,6 @@ class DetailUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindingViewModel()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        repoListTableView.tableHeaderView = makeTableHeaderView()
     }
     
     static func create(with viewModel: DetailUserViewModel) -> DetailUserViewController {
@@ -48,30 +45,36 @@ class DetailUserViewController: UIViewController {
         viewModel?.detailUser
             .bind(to: repoListTableView.rx.items(cellIdentifier: DetailUserCell.identifier, cellType: DetailUserCell.self)) { row, detailUser, cell in
                 cell.configure(with: detailUser)
+                self.setUpTableHeaderView(with: detailUser.owner.avatarUrl, with: detailUser.owner.login)
             }
             .disposed(by: rx.disposeBag)
     }
     
-    private func makeTableHeaderView() -> UIView {
-        let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width, height: 64)))
-        let imageView = UIImageView(frame: CGRect(origin: CGPoint(x: 16, y: 8), size: CGSize(width: 48, height: 48)))
+    private func setUpTableHeaderView(with imageUrl: String, with name: String) {
+        let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width,
+                                                                          height: self.repoListTableView.frame.height * 0.1)))
         
-        imageView.image = UIImage(systemName: "trash")
+        let imageView = UIImageView()
+        imageView.load(url: imageUrl)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
         let label = UILabel()
+        label.text = name
+        label.translatesAutoresizingMaskIntoConstraints = false
         
-//        imageView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 16).isActive = true
-//        imageView.topAnchor.constraint(equalTo: headerView.topAnchor, constant: 8).isActive = true
-//        imageView.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 8).isActive = true
-//        imageView.trailingAnchor.constraint(equalTo: label.leadingAnchor, constant: 8).isActive = true
-        
+        self.repoListTableView.tableHeaderView = headerView
         headerView.addSubview(imageView)
-        
-//        label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: -8).isActive = true
-//        label.topAnchor.constraint(equalTo: imageView.topAnchor).isActive = true
-//        label.bottomAnchor.constraint(equalTo: imageView.bottomAnchor).isActive = true
-//        label.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -8).isActive = true
-        
         headerView.addSubview(label)
-        return headerView
+        
+        imageView.layer.cornerRadius = 30
+        imageView.layer.masksToBounds = true
+        imageView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 16).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
+        imageView.heightAnchor.constraint(equalTo: headerView.heightAnchor, multiplier: 0.8).isActive = true
+        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
+
+        label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8).isActive = true
+        label.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
+        label.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -8).isActive = true
     }
 }
