@@ -17,6 +17,7 @@ class UserListViewModel: NSObject {
     internal let fetchMoreDatas = PublishSubject<String>()
     
     private var pageCounter = 1
+    private var previousText = ""
     private var isPaginationRequestStillResume = false
     
     init(with fetchUserListUseCase: FetchUserListUseCaseProtocol) {
@@ -30,12 +31,18 @@ class UserListViewModel: NSObject {
             guard let self = self else {
                 return
             }
-
-            guard event.element != "" else {
+            
+            guard let element = event.element else {
                 return
             }
             
-            let query = ["q": event.element ?? "", "page" : self.pageCounter] as [String : Any]
+            if self.previousText != element {
+                self.previousText = element
+                self.pageCounter = 1
+                self.userList.accept([])
+            }
+            
+            let query = ["q": element, "page" : self.pageCounter] as [String : Any]
             self.fetchData(with: query)
         }
         .disposed(by: rx.disposeBag)

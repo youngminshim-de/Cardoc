@@ -12,7 +12,7 @@ class DetailUserViewModel {
     private let fetchDetailUserUseCase: FetchDetailUserUseCaseProtocol
     private let endPoint: String
     
-    internal var detailUser: Observable<DetailUser> {
+    internal var detailUser: Observable<[DetailUser]> {
         return fetchDetailUserUseCase.execute(with: endPoint)
     }
     

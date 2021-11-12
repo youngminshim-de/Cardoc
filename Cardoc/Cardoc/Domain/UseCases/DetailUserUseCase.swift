@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 
 protocol FetchDetailUserUseCaseProtocol {
-    func execute(with endPoint: String) -> Observable<DetailUser>
+    func execute(with endPoint: String) -> Observable<[DetailUser]>
 }
 
 class FetchDetailUserUseCase: FetchDetailUserUseCaseProtocol {
@@ -20,7 +20,7 @@ class FetchDetailUserUseCase: FetchDetailUserUseCaseProtocol {
         self.detailUserRepository = detailUserRepository
     }
     
-    func execute(with endPoint: String) -> Observable<DetailUser> {
+    func execute(with endPoint: String) -> Observable<[DetailUser]> {
         return detailUserRepository.fetch(with: endPoint)
     }
 }

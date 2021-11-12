@@ -11,7 +11,7 @@ import RxCocoa
 import NSObject_Rx
 import Alamofire
 
-class SearchingUserViewController: UIViewController {
+class SearchingUserViewController: UIViewController, UISearchBarDelegate {
 
     private var searchController: UISearchController?
     private var searchBar: UISearchBar?
@@ -80,7 +80,6 @@ class SearchingUserViewController: UIViewController {
             guard let self = self else {
                 return
             }
-            
             // 현재 스크롤의 위치
             let offsetY = self.userInformationTableView.contentOffset.y
             // 테이블뷰의 contentsize의 height
@@ -94,21 +93,10 @@ class SearchingUserViewController: UIViewController {
         }
         .disposed(by: rx.disposeBag)
         
-        Observable.zip(userInformationTableView.rx.modelSelected(UserList.self),
-                       userInformationTableView.rx.itemSelected)
-            .subscribe { (user, indexpath) in
-                user.items[indexpath.row].reposUrl
+        userInformationTableView.rx.modelSelected(Item.self)
+            .subscribe { [weak self] item in
+                self?.coordinator?.presentDetailUserViewController(with: item.element?.reposUrl ?? "" )
             }
             .disposed(by: rx.disposeBag)
-        
     }
-}
-
-extension SearchingUserViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    }
-}
-
-extension SearchingUserViewController: UITableViewDelegate {
-    
 }

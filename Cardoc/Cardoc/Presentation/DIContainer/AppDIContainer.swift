@@ -12,11 +12,11 @@ class AppDiContainer: AppFlowCoordinatorDependencies {
     
     var searchUserNetworkService: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
     
-    var detailUsernetworkService: NetworkTask<SearchingRequest, DetailUserDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
+    var detailUsernetworkService: NetworkTask<SearchingRequest, [DetailUserDTO]> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
     
     struct Dependencies {
         let searchingUserTask: Task<SearchingRequest, UserListDTO>
-        let detailUserTask: Task<SearchingRequest, DetailUserDTO>
+        let detailUserTask: Task<SearchingRequest, [DetailUserDTO]>
     }
     
     private let dependencies: Dependencies

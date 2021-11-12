@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct [DetailUser]: Decodable {
+struct DetailUser: Decodable {
     private (set) var owner: Item
     private (set) var stargazersCount: Int
     private (set) var description: String?
