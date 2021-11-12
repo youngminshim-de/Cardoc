@@ -62,28 +62,31 @@ class DetailUserViewController: UIViewController {
 //            .disposed(by: rx.disposeBag)
         
         avatarImageView.rx.tapGesture()
-            .debug()
             .when(.recognized)
-            .subscribe { [weak self] _ in
-
+            .flatMap { [unowned self] _ in
+                self.viewModel!.detailUser
             }
+            .subscribe(onNext: { [weak self] users in
+                self?.dismiss(animated: true, completion: nil)
+                self?.coordinator?.showWebViewController(with: users[0].owner.htmlUrl)
+            })
             .disposed(by: rx.disposeBag)
         
         userNameLabel.rx.tapGesture()
             .when(.recognized)
-            .subscribe {
-                [weak self] _ in
-
+            .flatMap { [unowned self] _ in
+                self.viewModel!.detailUser
             }
+            .subscribe(onNext: { [weak self] users in
+                self?.dismiss(animated: true, completion: nil)
+                self?.coordinator?.showWebViewController(with: users[0].owner.htmlUrl)
+            })
             .disposed(by: rx.disposeBag)
     }
     
     private func setUpTableHeaderView(with imageUrl: String, with name: String) {
         let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width,
                                                                           height: self.repoListTableView.frame.height * 0.1)))
-        
-//        avatarImageView = UIImageView()
-//        userNameLabel = UILabel()
         
         self.repoListTableView.tableHeaderView = headerView
         headerView.addSubview(avatarImageView)
