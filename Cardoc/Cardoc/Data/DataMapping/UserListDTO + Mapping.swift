@@ -16,10 +16,11 @@ extension UserListDTO {
     struct ItemDTO: Decodable {
         private let login: String
         private let avatarUrl: String
+        private let htmlUrl: String
         private let reposUrl: String
-        
+
         func toDomain() -> Item {
-            return .init(login: login, avatarUrl: avatarUrl, reposUrl: reposUrl)
+            return .init(login: login, avatarUrl: avatarUrl, htmlUrl: htmlUrl, reposUrl: reposUrl)
         }
     }
     
