@@ -17,8 +17,8 @@ class DetailUserViewController: UIViewController {
     @IBOutlet weak var repoListTableView: UITableView!
     weak var coordinator: AppFlowCoordinator?
     private var viewModel: DetailUserViewModel?
-    private var avatarImageView: UIImageView?
-    private var userNameLabel: UILabel?
+    private var avatarImageView = UIImageView()
+    private var userNameLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,11 +55,25 @@ class DetailUserViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
         
-        avatarImageView?.rx.tapGesture()
+//        Observable.zip(avatarImageView.rx.tapGesture().asControlEvent(), userNameLabel.rx.tapGesture().asControlEvent())
+//            .subscribe { [weak self] _ in
+//                print(self?.viewModel?.detailUser.map{$0[0].htmlUrl})
+//            }
+//            .disposed(by: rx.disposeBag)
+        
+        avatarImageView.rx.tapGesture()
+            .debug()
             .when(.recognized)
             .subscribe { [weak self] _ in
-                //web View로 이동해야한다.
-                print(self?.viewModel?.detailUser.map{$0[0].htmlUrl})
+
+            }
+            .disposed(by: rx.disposeBag)
+        
+        userNameLabel.rx.tapGesture()
+            .when(.recognized)
+            .subscribe {
+                [weak self] _ in
+
             }
             .disposed(by: rx.disposeBag)
     }
@@ -68,12 +82,8 @@ class DetailUserViewController: UIViewController {
         let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width,
                                                                           height: self.repoListTableView.frame.height * 0.1)))
         
-        avatarImageView = UIImageView()
-        userNameLabel = UILabel()
-        guard let avatarImageView = avatarImageView,
-              let userNameLabel = userNameLabel else {
-            return
-        }
+//        avatarImageView = UIImageView()
+//        userNameLabel = UILabel()
         
         self.repoListTableView.tableHeaderView = headerView
         headerView.addSubview(avatarImageView)
