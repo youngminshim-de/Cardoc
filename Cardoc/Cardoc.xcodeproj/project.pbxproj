@@ -12,6 +12,7 @@
 		C511E056CE181672AD4FEE47 /* Pods_Cardoc_CardocUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB6F14912603A954CED59D4 /* Pods_Cardoc_CardocUITests.framework */; };
 		D400CD77273E0A3F00DAC238 /* DetailUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400CD76273E0A3F00DAC238 /* DetailUserViewModel.swift */; };
 		D439322F273D059C00185985 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D439322E273D059C00185985 /* UIImageView + Extension.swift */; };
+		D46D036B273EA10F0048566D /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D036A273EA10F0048566D /* WebViewController.swift */; };
 		D47FDA85273D2C870098BBCF /* DetailUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */; };
 		D47FDA87273D4FAC0098BBCF /* DetailUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA86273D4FAC0098BBCF /* DetailUserCell.swift */; };
 		D47FDA89273D641C0098BBCF /* DetailUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47FDA88273D641C0098BBCF /* DetailUser.swift */; };
@@ -71,6 +72,7 @@
 		D400CD76273E0A3F00DAC238 /* DetailUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewModel.swift; sourceTree = "<group>"; };
 		D439322E273D059C00185985 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		D44C1D04BEA03F1934A9319B /* Pods-CardocTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardocTests.release.xcconfig"; path = "Target Support Files/Pods-CardocTests/Pods-CardocTests.release.xcconfig"; sourceTree = "<group>"; };
+		D46D036A273EA10F0048566D /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewController.swift; sourceTree = "<group>"; };
 		D47FDA86273D4FAC0098BBCF /* DetailUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserCell.swift; sourceTree = "<group>"; };
 		D47FDA88273D641C0098BBCF /* DetailUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUser.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				D49C50B2273BB105007EBB9E /* UserListCell.swift */,
 				D47FDA84273D2C870098BBCF /* DetailUserViewController.swift */,
 				D47FDA86273D4FAC0098BBCF /* DetailUserCell.swift */,
+				D46D036A273EA10F0048566D /* WebViewController.swift */,
 			);
 			path = SearchScene;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				D49C50AD273BA5C8007EBB9E /* UserListRepository.swift in Sources */,
 				D49C50AF273BA8EC007EBB9E /* UserListUseCase.swift in Sources */,
 				D49C50AB273BA41B007EBB9E /* UserListDTO + Mapping.swift in Sources */,
+				D46D036B273EA10F0048566D /* WebViewController.swift in Sources */,
 				D49C5063273B6D45007EBB9E /* SearchingUserViewController.swift in Sources */,
 				D49C50A6273B957B007EBB9E /* NetworkTask.swift in Sources */,
 				D47FDA8B273D66680098BBCF /* DetailUserDTO + Mapping.swift in Sources */,

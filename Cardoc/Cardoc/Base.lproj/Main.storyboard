@@ -94,10 +94,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailUserCell" id="CPd-lo-S0Y" customClass="DetailUserCell" customModule="Cardoc" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="103.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CPd-lo-S0Y" id="bxb-Pz-yIQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc4-o6-uNo">
@@ -119,19 +119,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omt-AF-hHC">
-                                                    <rect key="frame" x="16" y="74" width="17" height="21.5"/>
+                                                    <rect key="frame" x="16" y="74" width="17" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVh-M5-8dE">
-                                                    <rect key="frame" x="85" y="74" width="313" height="21.5"/>
+                                                    <rect key="frame" x="85" y="74" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4W-oy-Shd">
-                                                    <rect key="frame" x="35" y="74.5" width="42" height="21"/>
+                                                    <rect key="frame" x="35" y="74" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
@@ -184,6 +184,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHz-zw-ZEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2702.898550724638" y="83.705357142857139"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="VfC-aT-IRx">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="sRM-65-EoU" customClass="WebViewController" customModule="Cardoc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7aM-aR-98M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enr-Sn-YW4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B7A-0k-8ka"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="enr-Sn-YW4" firstAttribute="leading" secondItem="B7A-0k-8ka" secondAttribute="leading" id="GoQ-XX-3oa"/>
+                            <constraint firstItem="B7A-0k-8ka" firstAttribute="trailing" secondItem="enr-Sn-YW4" secondAttribute="trailing" id="URH-tH-UKc"/>
+                            <constraint firstItem="enr-Sn-YW4" firstAttribute="top" secondItem="B7A-0k-8ka" secondAttribute="top" id="ddQ-H6-eze"/>
+                            <constraint firstItem="B7A-0k-8ka" firstAttribute="bottom" secondItem="enr-Sn-YW4" secondAttribute="bottom" id="vDS-ft-445"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="enr-Sn-YW4" id="baQ-vj-bkM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="730-WF-E0m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="-623"/>
         </scene>
     </scenes>
     <resources>

@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxGesture
+import NSObject_Rx
 import Kingfisher
 
 class DetailUserViewController: UIViewController {
@@ -13,6 +17,8 @@ class DetailUserViewController: UIViewController {
     @IBOutlet weak var repoListTableView: UITableView!
     weak var coordinator: AppFlowCoordinator?
     private var viewModel: DetailUserViewModel?
+    private var avatarImageView = UIImageView()
+    private var userNameLabel = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +49,38 @@ class DetailUserViewController: UIViewController {
             .disposed(by: rx.disposeBag)
         
         viewModel?.detailUser
-            .bind(to: repoListTableView.rx.items(cellIdentifier: DetailUserCell.identifier, cellType: DetailUserCell.self)) { row, detailUser, cell in
+            .bind(to: repoListTableView.rx.items(cellIdentifier: DetailUserCell.identifier, cellType: DetailUserCell.self)) { [weak self] row, detailUser, cell in
                 cell.configure(with: detailUser)
-                self.setUpTableHeaderView(with: detailUser.owner.avatarUrl, with: detailUser.owner.login)
+                self?.setUpTableHeaderView(with: detailUser.owner.avatarUrl, with: detailUser.owner.login)
             }
+            .disposed(by: rx.disposeBag)
+        
+//        Observable.zip(avatarImageView.rx.tapGesture().asControlEvent(), userNameLabel.rx.tapGesture().asControlEvent())
+//            .subscribe { [weak self] _ in
+//                print(self?.viewModel?.detailUser.map{$0[0].htmlUrl})
+//            }
+//            .disposed(by: rx.disposeBag)
+        
+        avatarImageView.rx.tapGesture()
+            .when(.recognized)
+            .flatMap { [unowned self] _ in
+                self.viewModel!.detailUser
+            }
+            .subscribe(onNext: { [weak self] users in
+                self?.dismiss(animated: true, completion: nil)
+                self?.coordinator?.showWebViewController(with: users[0].owner.htmlUrl)
+            })
+            .disposed(by: rx.disposeBag)
+        
+        userNameLabel.rx.tapGesture()
+            .when(.recognized)
+            .flatMap { [unowned self] _ in
+                self.viewModel!.detailUser
+            }
+            .subscribe(onNext: { [weak self] users in
+                self?.dismiss(animated: true, completion: nil)
+                self?.coordinator?.showWebViewController(with: users[0].owner.htmlUrl)
+            })
             .disposed(by: rx.disposeBag)
     }
     
@@ -54,27 +88,26 @@ class DetailUserViewController: UIViewController {
         let headerView = UIView(frame: CGRect(origin: .zero, size: CGSize(width: self.view.frame.width,
                                                                           height: self.repoListTableView.frame.height * 0.1)))
         
-        let imageView = UIImageView()
-        imageView.load(url: imageUrl)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let label = UILabel()
-        label.text = name
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
         self.repoListTableView.tableHeaderView = headerView
-        headerView.addSubview(imageView)
-        headerView.addSubview(label)
+        headerView.addSubview(avatarImageView)
+        headerView.addSubview(userNameLabel)
         
-        imageView.layer.cornerRadius = 30
-        imageView.layer.masksToBounds = true
-        imageView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 16).isActive = true
-        imageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
-        imageView.heightAnchor.constraint(equalTo: headerView.heightAnchor, multiplier: 0.8).isActive = true
-        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor).isActive = true
-
-        label.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8).isActive = true
-        label.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
-        label.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -8).isActive = true
+        avatarImageView.load(url: imageUrl)
+        avatarImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        userNameLabel.text = name
+        userNameLabel.font = .boldSystemFont(ofSize: 17)
+        userNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        avatarImageView.layer.cornerRadius = 30
+        avatarImageView.layer.masksToBounds = true
+        avatarImageView.leadingAnchor.constraint(equalTo: headerView.leadingAnchor, constant: 16).isActive = true
+        avatarImageView.centerYAnchor.constraint(equalTo: headerView.centerYAnchor).isActive = true
+        avatarImageView.heightAnchor.constraint(equalTo: headerView.heightAnchor, multiplier: 0.8).isActive = true
+        avatarImageView.widthAnchor.constraint(equalTo: avatarImageView.heightAnchor).isActive = true
+        
+        userNameLabel.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor, constant: 8).isActive = true
+        userNameLabel.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor).isActive = true
+        userNameLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -8).isActive = true
     }
 }
