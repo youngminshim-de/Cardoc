@@ -24,6 +24,6 @@ class UserListRepository: UserListRepositoryProtocol {
     func fetch(with query: [String:Any]? = nil) -> Observable<UserList> {
         return networkTask.fetch(SearchingRequest(path: EndPoint.searchingUserURL.description,
                                                   httpMethod: .get, bodyParams: query, headers: nil), UserListDTO.self)
-            .map{$0.toDomain()}
+            .map{ $0.toDomain() }
     }
 }
