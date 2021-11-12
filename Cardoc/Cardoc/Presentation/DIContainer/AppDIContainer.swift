@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class AppDiContainer: AppFlowCoordinatorDependencies {
-    
+
     var searchUserNetworkService: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
     
     var detailUsernetworkService: NetworkTask<SearchingRequest, [DetailUserDTO]> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
@@ -61,6 +61,12 @@ extension AppDiContainer {
     
     func makeDetailUserViewController(with endPoint: String) -> DetailUserViewController {
         return DetailUserViewController.create(with: makeDetailUserViewModel(with: endPoint))
+    }
+}
+
+extension AppDiContainer {
+    func makeWebViewController(with url: String) -> WebViewController {
+        return WebViewController.create(with: url)
     }
 }
 
