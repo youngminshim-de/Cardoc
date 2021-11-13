@@ -14,4 +14,5 @@ struct DetailUser: Decodable {
     private (set) var description: String?
     private (set) var language: String?
     private (set) var htmlUrl: String
+    private (set) var url: String
 }

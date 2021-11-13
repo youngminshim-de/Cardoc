@@ -20,7 +20,7 @@ extension UserListDTO {
         private let reposUrl: String
 
         func toDomain() -> Item {
-            return .init(login: login, avatarUrl: avatarUrl, htmlUrl: htmlUrl, reposUrl: reposUrl)
+            return .init(login: self.login, avatarUrl: self.avatarUrl, htmlUrl: self.htmlUrl, reposUrl: self.reposUrl)
         }
     }
     
@@ -31,6 +31,6 @@ extension UserListDTO {
     }
     
     func toDomain() -> UserList {
-        return .init(totalCount: totalCount, items: toDomainItems())
+        return .init(totalCount: self.totalCount, items: self.toDomainItems())
     }
 }

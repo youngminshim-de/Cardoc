@@ -8,14 +8,15 @@
 import Foundation
 
 struct DetailUserDTO: Decodable {
-    private (set) var owner: Item
-    private (set) var name: String
-    private (set) var stargazersCount: Int
-    private (set) var description: String?
-    private (set) var language: String?
-    private (set) var htmlUrl: String
+    private let owner: Item
+    private let name: String
+    private let stargazersCount: Int
+    private let description: String?
+    private let language: String?
+    private let htmlUrl: String
+    private let url: String
     
     func toDomain() -> DetailUser {
-        return .init(owner: self.owner, name: self.name, stargazersCount: self.stargazersCount, description: self.description, language: self.language, htmlUrl: self.htmlUrl)
+        return .init(owner: self.owner, name: self.name, stargazersCount: self.stargazersCount, description: self.description, language: self.language, htmlUrl: self.htmlUrl, url: self.url)
     }
 }
