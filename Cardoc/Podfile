@@ -10,6 +10,7 @@ pod 'Alamofire'
 pod 'Kingfisher'
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'RxGesture'
 pod 'RxDataSources'
 pod 'NSObject+Rx'
 

@@ -16,10 +16,11 @@ extension UserListDTO {
     struct ItemDTO: Decodable {
         private let login: String
         private let avatarUrl: String
+        private let htmlUrl: String
         private let reposUrl: String
-        
+
         func toDomain() -> Item {
-            return .init(login: login, avatarUrl: avatarUrl, reposUrl: reposUrl)
+            return .init(login: self.login, avatarUrl: self.avatarUrl, htmlUrl: self.htmlUrl, reposUrl: self.reposUrl)
         }
     }
     
@@ -30,6 +31,6 @@ extension UserListDTO {
     }
     
     func toDomain() -> UserList {
-        return .init(totalCount: totalCount, items: toDomainItems())
+        return .init(totalCount: self.totalCount, items: self.toDomainItems())
     }
 }

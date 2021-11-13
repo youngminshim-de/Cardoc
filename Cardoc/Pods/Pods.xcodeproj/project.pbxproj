@@ -892,7 +892,7 @@
 		8D93EE21B5702C3934288FC648217307 /* SectionModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionModel.swift; path = Sources/Differentiator/SectionModel.swift; sourceTree = "<group>"; };
 		8D94DBB23BFF7EBCB5316CB08926B21C /* Optional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Optional.swift; path = RxSwift/Observables/Optional.swift; sourceTree = "<group>"; };
 		8ED29A9AE9727239E1D3C800564DDE61 /* Delegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Delegate.swift; path = Sources/Utility/Delegate.swift; sourceTree = "<group>"; };
-		8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods-Cardoc */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Cardoc"; path = Pods_Cardoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods_Cardoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCEA2A0E5B20C16A704CDE8DE2377BF /* Pods-CardocTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardocTests-Info.plist"; sourceTree = "<group>"; };
 		90531D680FDAF1EE51824E29570A002E /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
 		90B631079AC201CBC69832A23E89DAC1 /* Binder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Binder.swift; path = RxSwift/Binder.swift; sourceTree = "<group>"; };
@@ -915,7 +915,7 @@
 		9D34E391E51356DA7F15919930F36ED8 /* SectionedViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SectionedViewDataSourceType.swift; path = RxCocoa/Common/SectionedViewDataSourceType.swift; sourceTree = "<group>"; };
 		9D71FF9FE3BC49F953E586AE6F55427C /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = RxSwift/Errors.swift; sourceTree = "<group>"; };
 		9D8401768D5179A9B094EA1D2B0624B3 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Sources/Utility/Result.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DDF3E6FA79A077D1117B251035CD8A4 /* ConnectableObservableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConnectableObservableType.swift; path = RxSwift/ConnectableObservableType.swift; sourceTree = "<group>"; };
 		9EEEFC1B29222B9001C5978566296C0A /* RxWKNavigationDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxWKNavigationDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxWKNavigationDelegateProxy.swift; sourceTree = "<group>"; };
 		9F5BC291882994BA09A050AE94480C0C /* Empty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Empty.swift; path = RxSwift/Observables/Empty.swift; sourceTree = "<group>"; };
@@ -1210,7 +1210,6 @@
 				DC32FEB1089F09915F9853FA4A73C7FB /* NSObject+Rx.swift */,
 				7B55084D1BDAF51041647771DDC65121 /* Support Files */,
 			);
-			name = "NSObject+Rx";
 			path = "NSObject+Rx";
 			sourceTree = "<group>";
 		};
@@ -1221,7 +1220,7 @@
 				D51C3D0C53D23B97B032E3BDD4F82C82 /* Differentiator */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				A4E0F907A63923C4154A172688E9888C /* NSObject+Rx */,
-				8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods-Cardoc */,
+				8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods_Cardoc.framework */,
 				6BE24BFCB643CA692CAA575E4C9C5E0E /* Pods-Cardoc-CardocUITests */,
 				F4F8A8EF80F37549EF2396857769B032 /* Pods-CardocTests */,
 				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */,
@@ -1409,7 +1408,6 @@
 				CF3CBF8A2A9218FF15DBF8A81C07A4CC /* Zip+Collection.swift */,
 				8AC588E10FC056FCD46A34BCCFEA9DFE /* Support Files */,
 			);
-			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -1430,7 +1428,6 @@
 				E9BB5B152DF0A31CBA0358E9580070B1 /* Utilities.swift */,
 				EFC7D079A037414641E55C2002C6C53B /* Support Files */,
 			);
-			name = Differentiator;
 			path = Differentiator;
 			sourceTree = "<group>";
 		};
@@ -1455,7 +1452,6 @@
 				128E6DA720965E5D38EBD931D28DC408 /* ViewTransition.swift */,
 				FFE0E8ABE56F223FB233B0652F18F4CC /* Support Files */,
 			);
-			name = RxDataSources;
 			path = RxDataSources;
 			sourceTree = "<group>";
 		};
@@ -1564,7 +1560,6 @@
 				94E369B38AB374ED96178867E552B3CA /* Validation.swift */,
 				A21C5C3245E6C930E7A253DC4B4D28D9 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1772,7 +1767,6 @@
 				0FA224CA2159A5ACF0E54B6A32D6F55E /* WKWebView+Rx.swift */,
 				C1747E15643A6A0A368F7B1F4C01B9EB /* Support Files */,
 			);
-			name = RxCocoa;
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -1837,7 +1831,6 @@
 				199EFB8EC588B93DD7D0B2299A29115E /* WKInterfaceImage+Kingfisher.swift */,
 				4F00020BAF57D44204C9950DDE67D436 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1867,7 +1860,6 @@
 				DE439A3F0539758654E63625B2A0E1BE /* Utils.swift */,
 				198D5E0031BF17A5956665B94EA35A93 /* Support Files */,
 			);
-			name = RxRelay;
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
@@ -2166,7 +2158,7 @@
 			);
 			name = "Pods-Cardoc";
 			productName = Pods_Cardoc;
-			productReference = 8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods-Cardoc */;
+			productReference = 8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods_Cardoc.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {

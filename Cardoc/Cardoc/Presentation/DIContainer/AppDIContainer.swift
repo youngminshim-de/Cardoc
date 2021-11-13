@@ -9,16 +9,20 @@ import Foundation
 import Alamofire
 
 class AppDiContainer: AppFlowCoordinatorDependencies {
-    var apiNetworkService: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
+
+    var searchUserNetworkService: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
+    
+    var detailUsernetworkService: NetworkTask<SearchingRequest, [DetailUserDTO]> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
     
     struct Dependencies {
         let searchingUserTask: Task<SearchingRequest, UserListDTO>
+        let detailUserTask: Task<SearchingRequest, [DetailUserDTO]>
     }
     
     private let dependencies: Dependencies
     
     init() {
-        self.dependencies = Dependencies(searchingUserTask: apiNetworkService)
+        self.dependencies = Dependencies(searchingUserTask: searchUserNetworkService, detailUserTask: detailUsernetworkService)
     }
     
     func makeUserListRepository() -> UserListRepositoryProtocol {
@@ -41,3 +45,28 @@ class AppDiContainer: AppFlowCoordinatorDependencies {
         return AppFlowCoordinator(with: navigationController, with: self)
     }
 }
+
+extension AppDiContainer {
+    func makeDetailUserRepository() -> DetailUserRepositoryProtocol {
+        return DetailUserRepository(with: dependencies.detailUserTask)
+    }
+    
+    func makeDetailUserUseCase() -> FetchDetailUserUseCaseProtocol {
+        return FetchDetailUserUseCase(with: makeDetailUserRepository())
+    }
+    
+    func makeDetailUserViewModel(with endPoint: String) -> DetailUserViewModel {
+        return DetailUserViewModel(with: makeDetailUserUseCase(), with: endPoint)
+    }
+    
+    func makeDetailUserViewController(with endPoint: String) -> DetailUserViewController {
+        return DetailUserViewController.create(with: makeDetailUserViewModel(with: endPoint))
+    }
+}
+
+extension AppDiContainer {
+    func makeWebViewController(with url: String) -> WebViewController {
+        return WebViewController.create(with: url)
+    }
+}
+
