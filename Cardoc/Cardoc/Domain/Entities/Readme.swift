@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ReadMe: Decodable {
+struct Readme: Decodable {
     private (set) var name: String
     private (set) var content: String
     private (set) var encoding: String

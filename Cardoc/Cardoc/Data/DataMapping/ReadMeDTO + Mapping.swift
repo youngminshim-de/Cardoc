@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct ReadMeDTO: Decodable {
+struct ReadmeDTO: Decodable {
     private let name: String
     private let content: String
     private let encoding: String
     private let url: String
     private let downloadUrl: String
     
-    func todomain() -> ReadMe {
+    func todomain() -> Readme {
         return .init(name: self.name, content: self.content, encoding: self.encoding, url: self.url, downloadUrl: self.downloadUrl)
     }
 }
