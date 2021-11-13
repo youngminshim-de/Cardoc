@@ -10,7 +10,6 @@ import RxSwift
 import RxCocoa
 import RxGesture
 import NSObject_Rx
-import Kingfisher
 
 class DetailUserViewController: UIViewController {
 
@@ -55,11 +54,13 @@ class DetailUserViewController: UIViewController {
             }
             .disposed(by: rx.disposeBag)
         
-//        Observable.zip(avatarImageView.rx.tapGesture().asControlEvent(), userNameLabel.rx.tapGesture().asControlEvent())
-//            .subscribe { [weak self] _ in
-//                print(self?.viewModel?.detailUser.map{$0[0].htmlUrl})
-//            }
-//            .disposed(by: rx.disposeBag)
+        repoListTableView.rx.modelSelected(DetailUser.self)
+            .subscribe { [weak self] event in
+                let detailUser =  event.element as! DetailUser
+                self?.dismiss(animated: true, completion: nil)
+                self?.coordinator?.showDetailRepositoryViewController(with: detailUser)
+            }
+            .disposed(by: rx.disposeBag)
         
         avatarImageView.rx.tapGesture()
             .when(.recognized)
