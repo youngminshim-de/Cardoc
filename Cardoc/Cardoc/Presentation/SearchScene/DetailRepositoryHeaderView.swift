@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CustomHeaderViewDelegate: AnyObject {
-    func buttonTouched()
+    func buttonTouched(with url: String)
 }
 
 class DetailRepositoryHeaderView: UIView {
@@ -27,6 +27,6 @@ class DetailRepositoryHeaderView: UIView {
     }
     
     @IBAction func repositoryLinkButtonTouched(_ sender: UIButton) {
-        delegate?.buttonTouched()
+        delegate?.buttonTouched(with: repositoryLinkButton.titleLabel?.text ?? "")
     }
 }
