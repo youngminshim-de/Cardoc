@@ -12,14 +12,15 @@ protocol ReadmeUseCaseProtocol {
     func execute(with endPoint: String) -> Observable<Readme>
 }
 
-class ReadmeUseCase: ReadmeRepositoryProtocol {
+class ReadmeUseCase: ReadmeUseCaseProtocol {
     private let readmeRepository: ReadmeRepositoryProtocol
     
     init(with readmeRepository: ReadmeRepositoryProtocol) {
         self.readmeRepository = readmeRepository
     }
     
-    func fetch(with endPoint: String) -> Observable<Readme> {
+    func execute(with endPoint: String) -> Observable<Readme> {
         return readmeRepository.fetch(with: endPoint)
     }
+    
 }
