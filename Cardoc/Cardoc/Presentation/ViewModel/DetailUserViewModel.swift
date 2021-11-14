@@ -8,11 +8,11 @@
 import Foundation
 import RxSwift
 
-class DetailUserViewModel {
+final class DetailUserViewModel {
     private let fetchDetailUserUseCase: FetchDetailUserUseCaseProtocol
     private let endPoint: String
     
-    internal var detailUser: Observable<[DetailUser]> {
+    var detailUser: Observable<[DetailUser]> {
         return fetchDetailUserUseCase.execute(with: endPoint)
     }
     

@@ -41,6 +41,7 @@ class SearchingUserViewController: UIViewController, UISearchBarDelegate {
     
     private func setupNavigationItem() {
         self.navigationItem.title = "github"
+        self.navigationItem.backButtonTitle = "back"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = true
@@ -54,7 +55,7 @@ class SearchingUserViewController: UIViewController, UISearchBarDelegate {
     }
 
     
-    func bindViewModel() {
+    private func bindViewModel() {
         viewModel?.userList
             .subscribe(onError: { [weak self] error in
                 self?.coordinator?.presentAlertController(with: self, with: error)

@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+final class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
 
     private var url: String?
     @IBOutlet weak var webView: WKWebView!
@@ -17,16 +17,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         super.viewDidLoad()
         setUpNavigationItem()
         loadWebView()
-//        self.webView?.allowsBackForwardNavigationGestures = true  //뒤로가기 제스쳐 허용
-//         webView.configuration.preferences.javaScriptEnabled = true  //자바스크립트 활성화
     }
-    
-//    override func loadView() {
-//        super.loadView()
-//
-//        webView.uiDelegate = self
-//        webView.navigationDelegate = self
-//    }
     
     static func create(with url: String) -> WebViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -45,8 +36,7 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         webView.load(request)
     }
     
-    func setUpNavigationItem() {
+    private func setUpNavigationItem() {
         self.navigationController?.navigationBar.prefersLargeTitles = false
     }
-    
 }

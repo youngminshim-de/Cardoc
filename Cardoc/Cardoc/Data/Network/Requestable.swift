@@ -16,7 +16,7 @@ protocol Requestable {
     func url() -> URL?
 }
 
-class SearchingRequest: Requestable {
+final class SearchingRequest: Requestable {
     
     var path: String
     var httpMethod: HTTPMethod

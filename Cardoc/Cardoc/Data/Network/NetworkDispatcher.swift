@@ -13,7 +13,7 @@ protocol NetworkDispatcher {
     func execute(request: Requestable) -> Observable<Data>
 }
 
-class SearchingDispatcher: NetworkDispatcher {
+final class SearchingDispatcher: NetworkDispatcher {
     
     private var session: SessionProtocol
     

@@ -18,7 +18,7 @@ class Task<Input, Output>: NSObject {
     }
 }
 
-class NetworkTask<Input: Requestable, Output: Decodable>: Task<Input, Output> {
+final class NetworkTask<Input: Requestable, Output: Decodable>: Task<Input, Output> {
     private var dispatcher: NetworkDispatcher
     private var decoder: JSONDecoder
     

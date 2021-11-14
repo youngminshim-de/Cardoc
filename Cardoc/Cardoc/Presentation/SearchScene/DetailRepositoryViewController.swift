@@ -59,9 +59,18 @@ class DetailRepositoryViewController: UIViewController, CustomHeaderViewDelegate
         markdownView.onRendered = { [weak self] height in
             self?.readmeHeightConstraint.constant = height
         }
+        
+        markdownView.onTouchLink = { [weak self] request in
+            guard let url = request.url?.absoluteString else {
+                return false
+            }
+
+            self?.coordinator?.showWebViewController(with: url)
+            return false
+        }
     }
     
-    func bindingViewModel() {
+    private func bindingViewModel() {
         viewModel?.detailUser?
             .bind(onNext: { [weak self] detailUser in
                 self?.headerView.configure(with: detailUser)

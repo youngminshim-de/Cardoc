@@ -10,11 +10,11 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 
-class UserListViewModel: NSObject {
+final class UserListViewModel: NSObject {
     
     private let fetchUserListUseCase: FetchUserListUseCaseProtocol
-    internal var userList = BehaviorSubject<[Item]>(value: [])
-    internal let fetchMoreDatas = PublishSubject<String>()
+    var userList = BehaviorSubject<[Item]>(value: [])
+    let fetchMoreDatas = PublishSubject<String>()
     
     private var pageCounter = 1
     private var previousText = ""
@@ -62,7 +62,7 @@ class UserListViewModel: NSObject {
             } catch {
                 self?.userList.onNext([])
             }
-            
+            self?.isPaginationRequestStillResume = false
         }, onError: { [weak self] error in
             self?.userList.onError(error)
         })

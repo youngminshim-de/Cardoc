@@ -35,7 +35,7 @@ class DetailUserViewController: UIViewController {
         return viewController
     }
     
-    internal func injectionCoordinator(with coordinator: AppFlowCoordinator) {
+    func injectionCoordinator(with coordinator: AppFlowCoordinator) {
         self.coordinator = coordinator
     }
     
