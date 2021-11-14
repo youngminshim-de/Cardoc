@@ -19,7 +19,7 @@ class DetailRepositoryHeaderView: UIView {
     
     weak var delegate: CustomHeaderViewDelegate?
     
-    internal func configure(with detailUser: DetailUser) {
+    func configure(with detailUser: DetailUser) {
         avatarImageView.load(url: detailUser.owner.avatarUrl)
         userNameLabel.text = detailUser.owner.login
         repositoryNameLabel.text = detailUser.name

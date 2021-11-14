@@ -10,11 +10,11 @@ import RxSwift
 import RxCocoa
 import NSObject_Rx
 
-class UserListViewModel: NSObject {
+final class UserListViewModel: NSObject {
     
     private let fetchUserListUseCase: FetchUserListUseCaseProtocol
-    internal var userList = BehaviorRelay<[Item]>(value: [])
-    internal let fetchMoreDatas = PublishSubject<String>()
+    var userList = BehaviorSubject<[Item]>(value: [])
+    let fetchMoreDatas = PublishSubject<String>()
     
     private var pageCounter = 1
     private var previousText = ""
@@ -32,14 +32,14 @@ class UserListViewModel: NSObject {
                 return
             }
             
-            guard let element = event.element else {
+            guard let element = event.element, element != "" else {
                 return
             }
             
             if self.previousText != element {
                 self.previousText = element
                 self.pageCounter = 1
-                self.userList.accept([])
+                self.userList.onNext([])
             }
             
             let query = ["q": element, "page" : self.pageCounter] as [String : Any]
@@ -55,12 +55,18 @@ class UserListViewModel: NSObject {
         
         isPaginationRequestStillResume = true
         
-        self.excute(with: query).map{$0.items}.subscribe { items in
-            let oldItems = self.userList.value
-            self.userList.accept(oldItems + (items.element ?? []))
-            self.isPaginationRequestStillResume = false
-        }
-        .disposed(by: self.rx.disposeBag)
+        self.excute(with: query).map{$0.items}.subscribe(onNext: { [weak self] items in
+            do {
+                let oldItems = try self?.userList.value()
+                self?.userList.onNext((oldItems ?? []) + (items))
+            } catch {
+                self?.userList.onNext([])
+            }
+            self?.isPaginationRequestStillResume = false
+        }, onError: { [weak self] error in
+            self?.userList.onError(error)
+        })
+        .disposed(by: rx.disposeBag)
         
         pageCounter += 1
     }

@@ -44,4 +44,15 @@ class AppFlowCoordinator: Coordinator {
         let webViewController = dependencies.makeWebViewController(with: url)
         self.rootViewController.pushViewController(webViewController, animated: true)
     }
+    
+    func presentAlertController(with viewController: UIViewController?, with error: Error) {
+        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+        alertController.addAction(okAction)
+        
+        guard let viewController = viewController else {
+            return
+        }
+        viewController.present(alertController, animated: true, completion: nil)
+    }
 }

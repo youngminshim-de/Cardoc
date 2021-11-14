@@ -59,21 +59,28 @@ class DetailRepositoryViewController: UIViewController, CustomHeaderViewDelegate
         markdownView.onRendered = { [weak self] height in
             self?.readmeHeightConstraint.constant = height
         }
+        
+        markdownView.onTouchLink = { [weak self] request in
+            guard let url = request.url?.absoluteString else {
+                return false
+            }
+
+            self?.coordinator?.showWebViewController(with: url)
+            return false
+        }
     }
     
-    func bindingViewModel() {
+    private func bindingViewModel() {
         viewModel?.detailUser?
             .bind(onNext: { [weak self] detailUser in
                 self?.headerView.configure(with: detailUser)
-                
             })
             .disposed(by: rx.disposeBag)
         
         viewModel?.readme
-            .subscribe(onNext: { [weak self ]readme in
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self ] readme in
                 self?.markdownView.load(markdown: readme.content.decodedBase64String())
-            }, onError: { error in
-                print(error)
             })
             .disposed(by: rx.disposeBag)
     }

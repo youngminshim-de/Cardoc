@@ -8,8 +8,7 @@
 import Foundation
 import Alamofire
 
-class AppDiContainer: AppFlowCoordinatorDependencies {
-
+final class AppDiContainer: AppFlowCoordinatorDependencies {
     var searchUserNetworkService: NetworkTask<SearchingRequest, UserListDTO> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)
     
     var detailUserNetworkService: NetworkTask<SearchingRequest, [DetailUserDTO]> = NetworkTask(with: SearchingDispatcher(with: AF), with: JSONDecoder(), with: .convertFromSnakeCase)

@@ -35,19 +35,20 @@ class DetailUserViewController: UIViewController {
         return viewController
     }
     
-    internal func injectionCoordinator(with coordinator: AppFlowCoordinator) {
+    func injectionCoordinator(with coordinator: AppFlowCoordinator) {
         self.coordinator = coordinator
     }
     
     private func bindingViewModel() {
         
         viewModel?.detailUser
-            .subscribe(onError: { error in
-                print(error)
+            .subscribe(onError: { [weak self] error in
+                self?.coordinator?.presentAlertController(with: self, with: error)
             })
             .disposed(by: rx.disposeBag)
         
         viewModel?.detailUser
+            .catchAndReturn([])
             .bind(to: repoListTableView.rx.items(cellIdentifier: DetailUserCell.identifier, cellType: DetailUserCell.self)) { [weak self] row, detailUser, cell in
                 cell.configure(with: detailUser)
                 self?.setUpTableHeaderView(with: detailUser.owner.avatarUrl, with: detailUser.owner.login)
@@ -56,7 +57,7 @@ class DetailUserViewController: UIViewController {
         
         repoListTableView.rx.modelSelected(DetailUser.self)
             .subscribe { [weak self] event in
-                let detailUser =  event.element as! DetailUser
+                let detailUser = event.element as! DetailUser
                 self?.dismiss(animated: true, completion: nil)
                 self?.coordinator?.showDetailRepositoryViewController(with: detailUser)
             }

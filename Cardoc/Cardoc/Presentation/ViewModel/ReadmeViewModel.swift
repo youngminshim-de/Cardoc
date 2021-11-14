@@ -8,13 +8,13 @@
 import Foundation
 import RxSwift
 
-class ReadmeViewModel {
+final class ReadmeViewModel {
     
     private let readmeUseCase: ReadmeUseCaseProtocol
     private var endPoint: String?
-    internal var detailUser: Observable<DetailUser>?
+    var detailUser: Observable<DetailUser>?
     
-    internal var readme: Observable<Readme> {
+    var readme: Observable<Readme> {
         return readmeUseCase.execute(with: endPoint! + EndPoint.readmeURL.description)
     }
     

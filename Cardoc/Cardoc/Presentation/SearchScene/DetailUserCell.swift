@@ -20,7 +20,5 @@ class DetailUserCell: UITableViewCell {
         self.descriptionLabel.text = detailUser.description
         self.languageLabel.text = detailUser.language
         self.starCountLabel.text = String(detailUser.stargazersCount)
-        
-        
     }
 }
