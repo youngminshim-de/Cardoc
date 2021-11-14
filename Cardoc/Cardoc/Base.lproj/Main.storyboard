@@ -94,10 +94,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailUserCell" id="CPd-lo-S0Y" customClass="DetailUserCell" customModule="Cardoc" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="103"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="103.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CPd-lo-S0Y" id="bxb-Pz-yIQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="103.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc4-o6-uNo">
@@ -119,19 +119,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omt-AF-hHC">
-                                                    <rect key="frame" x="16" y="74" width="17" height="21"/>
+                                                    <rect key="frame" x="16" y="74" width="17" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yVh-M5-8dE">
-                                                    <rect key="frame" x="85" y="74" width="313" height="21"/>
+                                                    <rect key="frame" x="85" y="74" width="313" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4W-oy-Shd">
-                                                    <rect key="frame" x="35" y="74" width="42" height="21"/>
+                                                    <rect key="frame" x="35" y="74.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGrayColor"/>
                                                     <nil key="highlightedColor"/>
@@ -197,7 +197,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCU-Pg-Uan">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="817"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ck7-cU-VnF">
                                                 <rect key="frame" x="0.0" y="108" width="414" height="1"/>
@@ -268,9 +268,12 @@
                                                     <outlet property="userNameLabel" destination="8fG-Dw-GM5" id="X4f-RR-Xv8"/>
                                                 </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbG-x2-Bbi" userLabel="readmeView">
-                                                <rect key="frame" x="0.0" y="109" width="414" height="891"/>
+                                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbG-x2-Bbi" userLabel="readmeView">
+                                                <rect key="frame" x="0.0" y="109" width="414" height="708"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="708" id="l2r-Fo-aHf"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -285,7 +288,6 @@
                                             <constraint firstAttribute="trailing" secondItem="ck7-cU-VnF" secondAttribute="trailing" id="TRD-7C-5W5"/>
                                             <constraint firstItem="VbG-x2-Bbi" firstAttribute="top" secondItem="ck7-cU-VnF" secondAttribute="bottom" id="coZ-do-CHJ"/>
                                             <constraint firstAttribute="bottom" secondItem="VbG-x2-Bbi" secondAttribute="bottom" id="mkR-pp-Nxx"/>
-                                            <constraint firstAttribute="height" constant="1000" id="nTq-eU-UxG"/>
                                             <constraint firstItem="G3b-od-GQ6" firstAttribute="leading" secondItem="VCU-Pg-Uan" secondAttribute="leading" id="u4c-f1-FhJ"/>
                                         </constraints>
                                     </view>
@@ -312,6 +314,7 @@
                     </view>
                     <connections>
                         <outlet property="headerView" destination="G3b-od-GQ6" id="8eN-Fr-HpI"/>
+                        <outlet property="readmeHeightConstraint" destination="l2r-Fo-aHf" id="VrA-3F-Cne"/>
                         <outlet property="readmeView" destination="VbG-x2-Bbi" id="KLr-O4-X2g"/>
                     </connections>
                 </viewController>
