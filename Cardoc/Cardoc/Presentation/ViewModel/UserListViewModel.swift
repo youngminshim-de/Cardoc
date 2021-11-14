@@ -33,6 +33,7 @@ final class UserListViewModel: NSObject {
             }
             
             guard let element = event.element, element != "" else {
+                self.userList.onNext([])
                 return
             }
             

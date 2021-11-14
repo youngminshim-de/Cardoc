@@ -71,13 +71,20 @@ class SearchingUserViewController: UIViewController, UISearchBarDelegate {
                 
         searchBar?.rx.searchButtonClicked
             .asDriver(onErrorJustReturn: ())
-            .drive(onNext: { [weak searchBar] in
+            .drive(onNext: { [weak self, weak searchBar] in
                 guard let text = searchBar?.text else {
                     return
                 }
                 
-                self.viewModel?.fetchMoreDatas.onNext(text)
+                self?.viewModel?.fetchMoreDatas.onNext(text)
                 searchBar?.resignFirstResponder()
+            })
+            .disposed(by: rx.disposeBag)
+        
+        searchBar?.rx.cancelButtonClicked
+            .asDriver(onErrorJustReturn: ())
+            .drive(onNext: { [weak self] _ in
+                self?.viewModel?.fetchMoreDatas.onNext("")
             })
             .disposed(by: rx.disposeBag)
                 
