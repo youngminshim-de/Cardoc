@@ -55,14 +55,14 @@ class SearchingUserViewController: UIViewController, UISearchBarDelegate {
 
     
     func bindViewModel() {
-        
         viewModel?.userList
-            .subscribe(onError: { error in
-                print(error)
+            .subscribe(onError: { [weak self] error in
+                self?.coordinator?.presentAlertController(with: self, with: error)
             })
             .disposed(by: rx.disposeBag)
         
         viewModel?.userList
+        .catchAndReturn([])
         .bind(to: userInformationTableView.rx.items(cellIdentifier: UserListCell.identifier, cellType: UserListCell.self)) { row, item, cell in
             cell.configure(with: item)
         }
@@ -71,7 +71,11 @@ class SearchingUserViewController: UIViewController, UISearchBarDelegate {
         searchBar?.rx.searchButtonClicked
             .asDriver(onErrorJustReturn: ())
             .drive(onNext: { [weak searchBar] in
-                self.viewModel?.fetchMoreDatas.onNext(searchBar?.text ?? "")
+                guard let text = searchBar?.text else {
+                    return
+                }
+                
+                self.viewModel?.fetchMoreDatas.onNext(text)
                 searchBar?.resignFirstResponder()
             })
             .disposed(by: rx.disposeBag)

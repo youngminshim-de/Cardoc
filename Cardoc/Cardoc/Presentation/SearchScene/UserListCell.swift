@@ -15,6 +15,7 @@ class UserListCell: UITableViewCell {
     private (set) static var identifier = "UserListCell"
     
     func configure(with item: Item) {
+        
         self.avatarImageView.load(url: item.avatarUrl)
         self.nameLabel.text = item.login
     }

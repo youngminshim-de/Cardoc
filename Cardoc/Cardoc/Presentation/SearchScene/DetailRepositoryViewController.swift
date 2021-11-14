@@ -65,15 +65,13 @@ class DetailRepositoryViewController: UIViewController, CustomHeaderViewDelegate
         viewModel?.detailUser?
             .bind(onNext: { [weak self] detailUser in
                 self?.headerView.configure(with: detailUser)
-                
             })
             .disposed(by: rx.disposeBag)
         
         viewModel?.readme
-            .subscribe(onNext: { [weak self ]readme in
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self ] readme in
                 self?.markdownView.load(markdown: readme.content.decodedBase64String())
-            }, onError: { error in
-                print(error)
             })
             .disposed(by: rx.disposeBag)
     }
