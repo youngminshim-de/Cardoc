@@ -12,6 +12,7 @@ protocol AppFlowCoordinatorDependencies {
     func makeSearchingUserViewController() -> SearchingUserViewController
     func makeDetailUserViewController(with endPoint: String) -> DetailUserViewController
     func makeWebViewController(with url: String) -> WebViewController
+    func makeDetailRepositoryViewController(with detailUser: DetailUser) -> DetailRepositoryViewController
 }
 
 protocol Coordinator {
@@ -31,6 +32,12 @@ class AppFlowCoordinator: Coordinator {
         let detailUserViewController = dependencies.makeDetailUserViewController(with: endPoint)
         detailUserViewController.injectionCoordinator(with: self)
         self.rootViewController.present(detailUserViewController, animated: true, completion: nil)
+    }
+    
+    func showDetailRepositoryViewController(with detailUser: DetailUser) {
+        let detailRepositoryViewController = dependencies.makeDetailRepositoryViewController(with: detailUser)
+        detailRepositoryViewController.injectionCoordinator(with: self)
+        self.rootViewController.pushViewController(detailRepositoryViewController, animated: true)
     }
     
     func showWebViewController(with url: String) {

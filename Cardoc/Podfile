@@ -13,6 +13,7 @@ pod 'RxCocoa'
 pod 'RxGesture'
 pod 'RxDataSources'
 pod 'NSObject+Rx'
+pod 'MarkdownView'
 
   target 'CardocTests' do
     inherit! :search_paths

@@ -36,7 +36,7 @@ class SearchingRequest: Requestable {
 }
 
 enum EndPoint: CustomStringConvertible {
-    case mainURL, searchingUserURL
+    case mainURL, searchingUserURL, readmeURL
     
     var description: String {
         switch self {
@@ -44,6 +44,8 @@ enum EndPoint: CustomStringConvertible {
             return "https://api.github.com/"
         case .searchingUserURL:
             return "https://api.github.com/search/users"
+        case .readmeURL:
+            return "/readme"
         }
     }
 }
