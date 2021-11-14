@@ -772,11 +772,7 @@
 		36A90C932EDE7D38BBF75717B4A93835 /* UISearchBar+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchBar+Rx.swift"; path = "RxCocoa/iOS/UISearchBar+Rx.swift"; sourceTree = "<group>"; };
 		37E6705FF48C30722F55DA0E5A47CB9A /* CompactMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompactMap.swift; path = RxSwift/Observables/CompactMap.swift; sourceTree = "<group>"; };
 		37EE21F6DEBF7F7B2C9734C8892BBA8B /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/General/ImageSource/Resource.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		3872DECFCF1FC8660E203820CE79206A /* main.css */ = {isa = PBXFileReference; includeInIndex = 1; name = main.css; path = Sources/MarkdownView/Resources/main.css; sourceTree = "<group>"; };
-=======
-		3872DECFCF1FC8660E203820CE79206A /* main.css */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.css; name = main.css; path = Sources/MarkdownView/Resources/main.css; sourceTree = "<group>"; };
->>>>>>> 9613a53 (docs: add Podfile)
 		3911A364C3CCD3C419791FD2BD9B5916 /* FloatingPointType+IdentifiableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingPointType+IdentifiableType.swift"; path = "Sources/RxDataSources/FloatingPointType+IdentifiableType.swift"; sourceTree = "<group>"; };
 		39BC16DCE4A0924E521827F875DE3369 /* RxSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RxSwift.modulemap; sourceTree = "<group>"; };
 		3ABF328A48D0F2B7947549EE122FA32A /* AddRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AddRef.swift; path = RxSwift/Observables/AddRef.swift; sourceTree = "<group>"; };
@@ -871,11 +867,7 @@
 		654D6CAB9D3433578A0AACC8070B3C2F /* Pods-Cardoc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cardoc.modulemap"; sourceTree = "<group>"; };
 		657D93DBC31894E8C2F12103386B1A68 /* KingfisherError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherError.swift; path = Sources/General/KingfisherError.swift; sourceTree = "<group>"; };
 		65A86F2C28B2865D8C843AD6160F4216 /* NSObject+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSObject+Rx.swift"; path = "RxCocoa/Foundation/NSObject+Rx.swift"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		65DF1BAC36C6601A5C04216A8B042C33 /* styled.html */ = {isa = PBXFileReference; includeInIndex = 1; name = styled.html; path = Sources/MarkdownView/Resources/styled.html; sourceTree = "<group>"; };
-=======
-		65DF1BAC36C6601A5C04216A8B042C33 /* styled.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = styled.html; path = Sources/MarkdownView/Resources/styled.html; sourceTree = "<group>"; };
->>>>>>> 9613a53 (docs: add Podfile)
 		661169010268767B8930D472B0E07AAC /* RxDataSources-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxDataSources-Info.plist"; sourceTree = "<group>"; };
 		66204F8F9743316C6A8AC9DB7B34D3EE /* ResourceBundle-MarkdownView-MarkdownView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-MarkdownView-MarkdownView-Info.plist"; sourceTree = "<group>"; };
 		666DD89F1F39C2F20BCF8EA993C4E27E /* Completable+AndThen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Completable+AndThen.swift"; path = "RxSwift/Traits/PrimitiveSequence/Completable+AndThen.swift"; sourceTree = "<group>"; };
@@ -888,11 +880,7 @@
 		698CF15BE166386208175986E4780259 /* CompositeDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositeDisposable.swift; path = RxSwift/Disposables/CompositeDisposable.swift; sourceTree = "<group>"; };
 		69F3FE8A7CDCFF92E288EA3A30B48F14 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		6A48A5882625CE3DC8C17BFD6204DA82 /* MainScheduler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainScheduler.swift; path = RxSwift/Schedulers/MainScheduler.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		6AB6B0EE509A2D29AF8BD338F9DC5482 /* main.js */ = {isa = PBXFileReference; includeInIndex = 1; name = main.js; path = Sources/MarkdownView/Resources/main.js; sourceTree = "<group>"; };
-=======
-		6AB6B0EE509A2D29AF8BD338F9DC5482 /* main.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = main.js; path = Sources/MarkdownView/Resources/main.js; sourceTree = "<group>"; };
->>>>>>> 9613a53 (docs: add Podfile)
 		6AF3D70F5C7BE5C11DB9D5691D944F29 /* RxScrollViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxScrollViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxScrollViewDelegateProxy.swift; sourceTree = "<group>"; };
 		6AFCDBCE3757BFAC877AD5ACBCBD7608 /* SubjectType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SubjectType.swift; path = RxSwift/Subjects/SubjectType.swift; sourceTree = "<group>"; };
 		6B4718EED2D7E42C517DB10165938742 /* RxGesture-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "RxGesture-Info.plist"; sourceTree = "<group>"; };
@@ -930,11 +918,7 @@
 		77E317BD04CDD54F170C3873CA555915 /* RxDataSources.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxDataSources.release.xcconfig; sourceTree = "<group>"; };
 		77F39A657ABFBFE713DEF83415316E2F /* UIPinchGestureRecognizer+RxGesture.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPinchGestureRecognizer+RxGesture.swift"; path = "Pod/Classes/iOS/UIPinchGestureRecognizer+RxGesture.swift"; sourceTree = "<group>"; };
 		788E7984D23B7604C9777BE19D114713 /* Pods-CardocTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CardocTests-dummy.m"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		78AA6A54734F08ADFF3FD713E4F77085 /* non_styled.html */ = {isa = PBXFileReference; includeInIndex = 1; name = non_styled.html; path = Sources/MarkdownView/Resources/non_styled.html; sourceTree = "<group>"; };
-=======
-		78AA6A54734F08ADFF3FD713E4F77085 /* non_styled.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = non_styled.html; path = Sources/MarkdownView/Resources/non_styled.html; sourceTree = "<group>"; };
->>>>>>> 9613a53 (docs: add Podfile)
 		78D2DB43E03626C206952F6CD8BEF000 /* RxCollectionViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxCollectionViewDataSourceType.swift; sourceTree = "<group>"; };
 		798F2DC1B14CDDF8B1DE683082FC354A /* Lock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Lock.swift; path = RxSwift/Concurrency/Lock.swift; sourceTree = "<group>"; };
 		79F9AB2B03791C447AFE92E51CFD9384 /* KFOptionsSetter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFOptionsSetter.swift; path = Sources/General/KFOptionsSetter.swift; sourceTree = "<group>"; };
@@ -982,11 +966,7 @@
 		8E8672C3E278DE634EEE3090467BD900 /* RxTableViewReactiveArrayDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxTableViewReactiveArrayDataSource.swift; path = RxCocoa/iOS/DataSources/RxTableViewReactiveArrayDataSource.swift; sourceTree = "<group>"; };
 		8F4720DD5A97B95B407F92DE3A9541A1 /* UISegmentedControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISegmentedControl+Rx.swift"; path = "RxCocoa/iOS/UISegmentedControl+Rx.swift"; sourceTree = "<group>"; };
 		8F6593E15363AE63DC3BC1B1A1E3BC26 /* NSControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSControl+Rx.swift"; path = "RxCocoa/macOS/NSControl+Rx.swift"; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods-Cardoc */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Cardoc"; path = Pods_Cardoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
-		8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods_Cardoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cardoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
->>>>>>> 9613a53 (docs: add Podfile)
 		8FB404FF28114476B731C82E34D419D8 /* SynchronizedUnsubscribeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SynchronizedUnsubscribeType.swift; path = RxSwift/Concurrency/SynchronizedUnsubscribeType.swift; sourceTree = "<group>"; };
 		8FCEA2A0E5B20C16A704CDE8DE2377BF /* Pods-CardocTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CardocTests-Info.plist"; sourceTree = "<group>"; };
 		8FD092DA7D4F0E1B017A10A2B7A7C450 /* NSObject+Rx-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+Rx-prefix.pch"; sourceTree = "<group>"; };
@@ -1018,11 +998,7 @@
 		9B0F333EB47D4B97534055A05E07CD35 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionHelpers.swift; path = Sources/Utility/ExtensionHelpers.swift; sourceTree = "<group>"; };
 		9C708B30A904FC05F4AFFC176B770A68 /* Diff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diff.swift; path = Sources/Differentiator/Diff.swift; sourceTree = "<group>"; };
 		9D7C376D655EBD93214E1E1BC7C091B1 /* ScheduledItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScheduledItem.swift; path = RxSwift/Schedulers/Internal/ScheduledItem.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-=======
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
->>>>>>> 9613a53 (docs: add Podfile)
 		9E190B20FA5AD39433F029EE89A0F733 /* Differentiator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Differentiator-prefix.pch"; sourceTree = "<group>"; };
 		9EBB41AEFD46EB99F51C71742B6C302E /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
 		9EBB8A2EE44EC5C771A2588EAA0D38CA /* RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxSwift.debug.xcconfig; sourceTree = "<group>"; };
@@ -1539,10 +1515,7 @@
 				454F5B954FB9C0D4AC5B42D2B8711C1C /* Zip+Collection.swift */,
 				724D9C97E9ED8C82F2C5155BD9E78812 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = RxSwift;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -1675,10 +1648,7 @@
 				524B658AF7BEE135465351E39508137B /* WKWebView+Rx.swift */,
 				B41AA6D6F8431B9793BFD9445C123A4E /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = RxCocoa;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -1691,11 +1661,7 @@
 				702CE5644EF1F26425C05E058547C562 /* MarkdownView */,
 				209039795703F925DC2A9D91BF5B7821 /* MarkdownView-MarkdownView */,
 				A4E0F907A63923C4154A172688E9888C /* NSObject+Rx */,
-<<<<<<< HEAD
 				8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods-Cardoc */,
-=======
-				8F77A96DEE2E47FEC5660AD19F2CA9CE /* Pods_Cardoc.framework */,
->>>>>>> 9613a53 (docs: add Podfile)
 				6BE24BFCB643CA692CAA575E4C9C5E0E /* Pods-Cardoc-CardocUITests */,
 				F4F8A8EF80F37549EF2396857769B032 /* Pods-CardocTests */,
 				BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa */,
@@ -1724,10 +1690,7 @@
 				9F5EC1F7446D3D56C18E16B99597A20F /* Utilities.swift */,
 				27031B1B82A31205903B3DB1AB8C6788 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = Differentiator;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = Differentiator;
 			sourceTree = "<group>";
 		};
@@ -1738,10 +1701,7 @@
 				0CE173F13F61987ABCB946B5F28459B2 /* NSObject+Rx.swift */,
 				5A5030FCE6098A88DD1772A51FE7FBB4 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = "NSObject+Rx";
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = "NSObject+Rx";
 			sourceTree = "<group>";
 		};
@@ -1831,10 +1791,7 @@
 				DABBF654EDA857912C6C4E1F242E5268 /* WKInterfaceImage+Kingfisher.swift */,
 				A6490024A9728CB014CB25BC0C4C6310 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = Kingfisher;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -1863,10 +1820,7 @@
 				1730CCD7487CC229BE4D0546C81ECBBD /* Utils.swift */,
 				BE3E89763FD2F2207E1F14A55ADA0781 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = RxRelay;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
@@ -1887,10 +1841,7 @@
 				0A087D1C3361DF62469EB682F07556AF /* Resources */,
 				D96DE73198BEED1A6C3B18F468C72455 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = MarkdownView;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = MarkdownView;
 			sourceTree = "<group>";
 		};
@@ -2004,10 +1955,7 @@
 				76C4EBAFF3579ED5B337CE3935511598 /* View+RxGesture.swift */,
 				EB3FC5B925D2147DAE819732990CC8C5 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = RxGesture;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = RxGesture;
 			sourceTree = "<group>";
 		};
@@ -2060,10 +2008,7 @@
 				3D71FECC32DA6970043BEFD4A3B28D50 /* ViewTransition.swift */,
 				DC6408024456FB8A36486EE03CF41B55 /* Support Files */,
 			);
-<<<<<<< HEAD
 			name = RxDataSources;
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			path = RxDataSources;
 			sourceTree = "<group>";
 		};
@@ -2522,26 +2467,6 @@
 			productReference = 4C7573034822F093BCAF13EC6B7B8454 /* RxGesture */;
 			productType = "com.apple.product-type.framework";
 		};
-		D77CA6E20D3F659D26E05339EBA33B59 /* RxGesture */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D56C6405E99353A6E4BF7FB5C4B34492 /* Build configuration list for PBXNativeTarget "RxGesture" */;
-			buildPhases = (
-				5043046EDF457F64B47371EAA2E28C4F /* Headers */,
-				9E620A69BF83677390B7F6DE8639945F /* Sources */,
-				61C3C6B8FC731AB8E56F257B4B601DFA /* Frameworks */,
-				2C3C321BE49EDC50FE75DA64868B2CD6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				313AEE62913E3C98F384B2BAB72BE9CA /* PBXTargetDependency */,
-				FF072A3A853B8A23360A0310AA05566F /* PBXTargetDependency */,
-			);
-			name = RxGesture;
-			productName = RxGesture;
-			productReference = 4C7573034822F093BCAF13EC6B7B8454 /* RxGesture */;
-			productType = "com.apple.product-type.framework";
-		};
 		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54C4FCC4FD912A11231F09292F7C93A1 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
@@ -2674,7 +2599,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		60C75B352ED18CBEEBA18A5EFB26014B /* Resources */ = {
-<<<<<<< HEAD
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2682,30 +2606,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		6D9F1FBE23097EE010C7C92DEAED3118 /* Resources */ = {
-=======
->>>>>>> 9613a53 (docs: add Podfile)
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
 		736A5F52F650B8355CD09370841081F6 /* Resources */ = {
-=======
-		6D9F1FBE23097EE010C7C92DEAED3118 /* Resources */ = {
->>>>>>> 9613a53 (docs: add Podfile)
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
 		7783250FCDC297EB4EC231B8AB4AFCB7 /* Resources */ = {
-=======
-		736A5F52F650B8355CD09370841081F6 /* Resources */ = {
->>>>>>> 9613a53 (docs: add Podfile)
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2716,22 +2630,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
 		8A4D8E9FA122FFF4CD1BE8F2022B7460 /* Resources */ = {
-=======
-		7783250FCDC297EB4EC231B8AB4AFCB7 /* Resources */ = {
->>>>>>> 9613a53 (docs: add Podfile)
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D88514D18763DB9542A44ABC1F56FA7 /* main.css in Resources */,
-				6D48B27C36B8EECC6F240316BEC9480D /* main.js in Resources */,
-				236CAEC0D6D54A7F43FDFA2FB41AD4E6 /* non_styled.html in Resources */,
-				BC41F255328E32B84CE487F963E2452C /* styled.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-<<<<<<< HEAD
 		93ECA2D9F79614966DFA76280ABFEF67 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2739,29 +2644,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8D6AD1BD6863B21A8AB1DB161659DB8 /* Resources */ = {
-=======
-		8A4D8E9FA122FFF4CD1BE8F2022B7460 /* Resources */ = {
->>>>>>> 9613a53 (docs: add Podfile)
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-<<<<<<< HEAD
-		F1D67142037764F2E343EFBB20D3B0D9 /* Resources */ = {
-=======
-		93ECA2D9F79614966DFA76280ABFEF67 /* Resources */ = {
->>>>>>> 9613a53 (docs: add Podfile)
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-<<<<<<< HEAD
-=======
 		A8D6AD1BD6863B21A8AB1DB161659DB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2776,7 +2658,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
->>>>>>> 9613a53 (docs: add Podfile)
 		F3EBD168094ECAA69E68FF672DAA6E6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
