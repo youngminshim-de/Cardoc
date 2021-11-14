@@ -6,24 +6,73 @@
 //
 
 import UIKit
+import RxSwift
+import MarkdownView
 
-class DetailRepositoryViewController: UIViewController {
+class DetailRepositoryViewController: UIViewController, CustomHeaderViewDelegate {
 
+    @IBOutlet weak var headerView: DetailRepositoryHeaderView!
+    @IBOutlet weak var readmeView: UIView!
+    private var markdownView: MarkdownView = MarkdownView()
+    
+    weak var coordinator: AppFlowCoordinator?
+    private var viewModel: ReadmeViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        headerView.delegate = self
+        setupNavigationItem()
+        setupMarkDownView()
+        bindingViewModel()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    static func create(with viewModel: ReadmeViewModel, with detailUser: DetailUser) -> DetailRepositoryViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DetailRepositoryViewController") as? DetailRepositoryViewController else {
+            return DetailRepositoryViewController()
+        }
+        viewController.viewModel = viewModel
+        viewController.viewModel?.injectionDetailUser(with: detailUser)
+        return viewController
     }
-    */
-
+    
+    func injectionCoordinator(with coordinator: AppFlowCoordinator) {
+        self.coordinator = coordinator
+    }
+    
+    private func setupNavigationItem() {
+        self.navigationItem.title = ""
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    private func setupMarkDownView() {
+        self.readmeView.addSubview(markdownView)
+        markdownView.translatesAutoresizingMaskIntoConstraints = false
+        markdownView.leadingAnchor.constraint(equalTo: readmeView.leadingAnchor).isActive = true
+        markdownView.topAnchor.constraint(equalTo: readmeView.topAnchor).isActive = true
+        markdownView.trailingAnchor.constraint(equalTo: readmeView.trailingAnchor).isActive = true
+        markdownView.bottomAnchor.constraint(equalTo: readmeView.bottomAnchor).isActive = true
+    }
+    
+    func bindingViewModel() {
+        viewModel?.detailUser?
+            .bind(onNext: { [weak self] detailUser in
+                self?.headerView.configure(with: detailUser)
+                
+            })
+            .disposed(by: rx.disposeBag)
+        
+        viewModel?.readme
+            .subscribe(onNext: { [weak self ]readme in
+                self?.markdownView.load(markdown: readme.content.decodedBase64String())
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: rx.disposeBag)
+    }
+    
+    func buttonTouched(with url: String) {
+        self.coordinator?.showWebViewController(with: url)
+    }
 }
